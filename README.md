@@ -9,5 +9,5 @@ Copy `.env.example` to `.env`, open the file and fill in your [TravelPerk API Ke
 
 Run `docker-compose up --build`.
 
-On your web browser navigate to `http://localhost/invoices` and see a list with some of your invoices.
+On your web browser navigate to `http://localhost` and navigate through the app.
 
