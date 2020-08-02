@@ -20,7 +20,11 @@ Invoices
     <tbody>
         @foreach($data->invoices as $invoice)
         <tr>
-            <td>{{ $invoice->serial_number }}</td>
+            <td>
+                <a href="{{route('invoice', ['serialNumber' => $invoice->serial_number])}}">
+                    {{ $invoice->serial_number }}
+                </a>
+            </td>
             <td>{{ $invoice->profile_id }}</td>
             <td>{{ $invoice->profile_name}}</td>
             <td>{{ $invoice->mode }}</td>

@@ -13,18 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/invoices', function () {
-    return view('invoices', ['data' => TravelPerk::expenses()->invoices()->all()]);
-})->name('invoices');
-
-Route::get('/invoice-profiles', function () {
-    return view('invoice-profiles', ['data' => TravelPerk::expenses()->invoiceProfiles()->all()]);
-})->name('invoice-profiles');
-
-Route::get('/invoice-lines', function () {
-    return view('invoice-lines', ['data' => TravelPerk::expenses()->invoices()->lines()]);
-})->name('invoice-lines');
+Route::get('/', function () { return view('welcome'); });
+Route::get('/invoices', 'InvoicesController@all')->name('invoices');
+Route::get('/invoices/{serialNumber}', 'InvoicesController@view')->name('invoice');
+Route::get('/invoice-profiles', 'InvoicesController@profiles')->name('invoice-profiles');
+Route::get('/invoice-lines', 'InvoicesController@lines')->name('invoice-lines');
