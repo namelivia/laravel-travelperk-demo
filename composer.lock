@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1f9597fdcf5cbfe7babe8bb2124c2226",
+    "content-hash": "6be6a181cf9fa311ccde86bdb9863a37",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1358,23 +1358,23 @@
         },
         {
             "name": "namelivia/laravel-travelperk",
-            "version": "0.0.3",
+            "version": "0.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/namelivia/laravel-travelperk.git",
-                "reference": "62de771807c3490d778e0542e2ec17c98fbb3e81"
+                "reference": "f26c8ee97e6fa1787e5ac07f82c37f3074349cdb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/namelivia/laravel-travelperk/zipball/62de771807c3490d778e0542e2ec17c98fbb3e81",
-                "reference": "62de771807c3490d778e0542e2ec17c98fbb3e81",
+                "url": "https://api.github.com/repos/namelivia/laravel-travelperk/zipball/f26c8ee97e6fa1787e5ac07f82c37f3074349cdb",
+                "reference": "f26c8ee97e6fa1787e5ac07f82c37f3074349cdb",
                 "shasum": ""
             },
             "require": {
                 "graham-campbell/manager": "3.*|4.*",
                 "illuminate/contracts": "5.5.*|5.6.*|5.7.*|5.8.*|6.*|7.*",
                 "illuminate/support": "5.5.*|5.6.*|5.7.*|5.8.*|6.*|7.*",
-                "namelivia/travelperk-http-php": "^0.0.4",
+                "namelivia/travelperk-http-php": "^0.0.5",
                 "php": "^7.3"
             },
             "require-dev": {
@@ -1415,20 +1415,20 @@
                 "laravel",
                 "travelperk"
             ],
-            "time": "2020-08-02T11:51:13+00:00"
+            "time": "2020-08-02T16:07:59+00:00"
         },
         {
             "name": "namelivia/travelperk-http-php",
-            "version": "0.0.4",
+            "version": "0.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/namelivia/travelperk-http-php.git",
-                "reference": "cf02501e2a649cd7eaca3212109d231698c34530"
+                "reference": "4ef2d9ef79592a24f1afc708b68e9f5689754989"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/namelivia/travelperk-http-php/zipball/cf02501e2a649cd7eaca3212109d231698c34530",
-                "reference": "cf02501e2a649cd7eaca3212109d231698c34530",
+                "url": "https://api.github.com/repos/namelivia/travelperk-http-php/zipball/4ef2d9ef79592a24f1afc708b68e9f5689754989",
+                "reference": "4ef2d9ef79592a24f1afc708b68e9f5689754989",
                 "shasum": ""
             },
             "require": {
@@ -1463,7 +1463,7 @@
                 "sdk",
                 "travelperk"
             ],
-            "time": "2020-08-02T11:44:21+00:00"
+            "time": "2020-08-02T15:41:50+00:00"
         },
         {
             "name": "nesbot/carbon",

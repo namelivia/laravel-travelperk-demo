@@ -5,6 +5,16 @@ Invoices Profiles
 @endsection
 
 @section('content')
+@section('content')
+<form method="GET" action="/invoice-lines">
+    <label for="offset">Offset</label>
+    <input id="offset" name="offset" type="number" value="{{ $response->offset}}">
+    <label for="limit">Limit</label>
+    <input id="limit" name="limit" type="number" value="{{ $response->limit }}">
+    <label for="account_number">TravelPerk Bank Account Number</label>
+    <input id="account_number" name="account_number" type="text" value="{{ $account_number }}">
+    <input type="submit" value="Apply"/>
+</form>
 <table class="table table-sm table-striped table-bordered">
     <thead class="thead-dark">
         <tr>
@@ -28,7 +38,7 @@ Invoices Profiles
         </tr>
     </thead>
     <tbody>
-        @foreach($data->invoice_lines as $invoiceLine)
+        @foreach($response->invoice_lines as $invoiceLine)
         <tr>
             <td>{{ $invoiceLine->expense_date }}</td>
             <td>{{ $invoiceLine->description }}</td>
@@ -39,7 +49,11 @@ Invoices Profiles
             <td>{{ $invoiceLine->tax_amount }}</td>
             <td>{{ $invoiceLine->tax_regime }}</td>
             <td>{{ $invoiceLine->total_amount }}</td>
-            <td>{{ $invoiceLine->invoice_serial_number }}</td>
+            <td>
+                <a href="{{route('invoice', ['serialNumber' => $invoiceLine->invoice_serial_number])}}">
+                    {{ $invoiceLine->invoice_serial_number }}
+                </a>
+            </td>
             <td>{{ $invoiceLine->profile_id }}</td>
             <td>{{ $invoiceLine->profile_name }}</td>
             <td>{{ $invoiceLine->invoice_mode }}</td>
@@ -51,5 +65,5 @@ Invoices Profiles
         @endforeach
     </tbody>
 </table>
-Total: {{ $data->total }} | Offset: {{ $data->offset }} | Limit: {{ $data->limit }}
+Total: {{ $response->total }} | Offset: {{ $response->offset }} | Limit: {{ $response->limit }}
 @endsection
