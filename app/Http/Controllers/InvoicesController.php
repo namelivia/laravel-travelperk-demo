@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Namelivia\TravelPerk\Laravel\Facades\TravelPerk;
+use Namelivia\TravelPerk\Expenses\InvoicesInputParams;
+use Illuminate\Support\Facades\Request;
 
 class InvoicesController extends Controller
 {
@@ -14,7 +16,27 @@ class InvoicesController extends Controller
      */
     public function all()
     {
-        return view('invoices', ['data' => TravelPerk::expenses()->invoices()->all()]);
+        $params = new InvoicesInputParams();
+
+        $limit = Request::input("limit");
+		if (isset($limit)) {
+			$params->setLimit($limit);
+		}
+
+        $accountNumber = Request::input("account_number");
+		if (isset($accountNumber)) {
+			$params->setTravelperkBankAccountNumber($accountNumber);
+		}
+
+        $offset = Request::input("offset");
+		if (isset($offset)) {
+			$params->setOffset($offset);
+		}
+
+        return view('invoices', [
+            'response' => TravelPerk::expenses()->invoices()->all($params),
+            'account_number' => $accountNumber,
+        ]);
     }
 
     /**

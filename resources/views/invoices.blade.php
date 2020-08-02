@@ -5,6 +5,15 @@ Invoices
 @endsection
 
 @section('content')
+<form method="GET" action="/invoices">
+    <label for="offset">Offset</label>
+    <input id="offset" name="offset" type="number" value="{{ $response->offset}}">
+    <label for="limit">Limit</label>
+    <input id="limit" name="limit" type="number" value="{{ $response->limit }}">
+    <label for="account_number">TravelPerk Bank Account Number</label>
+    <input id="account_number" name="account_number" type="text" value="{{ $account_number }}">
+    <input type="submit" value="Apply"/>
+</form>
 <table class="table table-sm table-striped table-bordered">
     <thead class="thead-dark">
         <tr>
@@ -18,7 +27,7 @@ Invoices
         </tr>
     </thead>
     <tbody>
-        @foreach($data->invoices as $invoice)
+        @foreach($response->invoices as $invoice)
         <tr>
             <td>
                 <a href="{{route('invoice', ['serialNumber' => $invoice->serial_number])}}">
@@ -35,5 +44,4 @@ Invoices
         @endforeach
     </tbody>
 </table>
-Total: {{ $data->total }} | Offset: {{ $data->offset }} | Limit: {{ $data->limit }}
 @endsection
