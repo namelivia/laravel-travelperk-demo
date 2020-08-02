@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "156f9030068d8a2481d963c78c4de81c",
+    "content-hash": "1f9597fdcf5cbfe7babe8bb2124c2226",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1358,23 +1358,23 @@
         },
         {
             "name": "namelivia/laravel-travelperk",
-            "version": "0.0.2",
+            "version": "0.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/namelivia/laravel-travelperk.git",
-                "reference": "416d54d495da7fef2f1fb24a519f9562caa6b9e0"
+                "reference": "62de771807c3490d778e0542e2ec17c98fbb3e81"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/namelivia/laravel-travelperk/zipball/416d54d495da7fef2f1fb24a519f9562caa6b9e0",
-                "reference": "416d54d495da7fef2f1fb24a519f9562caa6b9e0",
+                "url": "https://api.github.com/repos/namelivia/laravel-travelperk/zipball/62de771807c3490d778e0542e2ec17c98fbb3e81",
+                "reference": "62de771807c3490d778e0542e2ec17c98fbb3e81",
                 "shasum": ""
             },
             "require": {
                 "graham-campbell/manager": "3.*|4.*",
                 "illuminate/contracts": "5.5.*|5.6.*|5.7.*|5.8.*|6.*|7.*",
                 "illuminate/support": "5.5.*|5.6.*|5.7.*|5.8.*|6.*|7.*",
-                "namelivia/travelperk-http-php": "^0.0.2",
+                "namelivia/travelperk-http-php": "^0.0.4",
                 "php": "^7.3"
             },
             "require-dev": {
@@ -1415,20 +1415,20 @@
                 "laravel",
                 "travelperk"
             ],
-            "time": "2020-08-01T11:59:46+00:00"
+            "time": "2020-08-02T11:51:13+00:00"
         },
         {
             "name": "namelivia/travelperk-http-php",
-            "version": "0.0.2",
+            "version": "0.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/namelivia/travelperk-http-php.git",
-                "reference": "37f98a2518d2bdfaed35b49aed592259e235e779"
+                "reference": "cf02501e2a649cd7eaca3212109d231698c34530"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/namelivia/travelperk-http-php/zipball/37f98a2518d2bdfaed35b49aed592259e235e779",
-                "reference": "37f98a2518d2bdfaed35b49aed592259e235e779",
+                "url": "https://api.github.com/repos/namelivia/travelperk-http-php/zipball/cf02501e2a649cd7eaca3212109d231698c34530",
+                "reference": "cf02501e2a649cd7eaca3212109d231698c34530",
                 "shasum": ""
             },
             "require": {
@@ -1463,7 +1463,7 @@
                 "sdk",
                 "travelperk"
             ],
-            "time": "2020-08-01T11:54:08+00:00"
+            "time": "2020-08-02T11:44:21+00:00"
         },
         {
             "name": "nesbot/carbon",
@@ -4807,16 +4807,16 @@
         },
         {
             "name": "facade/ignition",
-            "version": "2.3.4",
+            "version": "2.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/facade/ignition.git",
-                "reference": "87335b120bc9652e4ee2bf285b7322a785211476"
+                "reference": "58dc4a8df3d41174c677a370b6779b694e4539e7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/facade/ignition/zipball/87335b120bc9652e4ee2bf285b7322a785211476",
-                "reference": "87335b120bc9652e4ee2bf285b7322a785211476",
+                "url": "https://api.github.com/repos/facade/ignition/zipball/58dc4a8df3d41174c677a370b6779b694e4539e7",
+                "reference": "58dc4a8df3d41174c677a370b6779b694e4539e7",
                 "shasum": ""
             },
             "require": {
@@ -4875,7 +4875,7 @@
                 "laravel",
                 "page"
             ],
-            "time": "2020-07-27T15:17:39+00:00"
+            "time": "2020-08-01T21:20:01+00:00"
         },
         {
             "name": "facade/ignition-contracts",

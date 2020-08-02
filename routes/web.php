@@ -18,13 +18,13 @@ Route::get('/', function () {
 });
 
 Route::get('/invoices', function () {
-    return view('invoices', ['data' => json_decode(TravelPerk::expenses()->invoices()->all())]);
+    return view('invoices', ['data' => TravelPerk::expenses()->invoices()->all()]);
 })->name('invoices');
 
 Route::get('/invoice-profiles', function () {
-    return view('invoice-profiles', ['data' => json_decode(TravelPerk::expenses()->invoiceProfiles()->all())]);
+    return view('invoice-profiles', ['data' => TravelPerk::expenses()->invoiceProfiles()->all()]);
 })->name('invoice-profiles');
 
 Route::get('/invoice-lines', function () {
-    return view('invoice-lines', ['data' => json_decode(TravelPerk::expenses()->invoices()->lines())]);
+    return view('invoice-lines', ['data' => TravelPerk::expenses()->invoices()->lines()]);
 })->name('invoice-lines');
