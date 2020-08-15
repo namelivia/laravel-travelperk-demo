@@ -18,6 +18,9 @@
       <li class="nav-item {{ \Str::contains(request()->route()->getName(),'users') ? 'active' : ''}}">
         <a class="nav-link" href="{{route('users')}}">Users</a>
       </li>
+      <li class="nav-item {{ \Str::contains(request()->route()->getName(),'discovery') ? 'active' : ''}}">
+        <a class="nav-link" href="{{route('discovery')}}">Discovery</a>
+      </li>
     </ul>
   </div>
 </nav>

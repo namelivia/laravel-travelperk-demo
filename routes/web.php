@@ -19,3 +19,4 @@ Route::get('/invoices/{serialNumber}', 'InvoicesController@view')->name('invoice
 Route::get('/invoice-profiles', 'InvoicesController@profiles')->name('invoice-profiles');
 Route::get('/invoice-lines', 'InvoicesController@lines')->name('invoice-lines');
 Route::get('/users', 'UsersController@all')->name('users');
+Route::get('/discovery', 'DiscoveryController@discovery')->name('discovery');
