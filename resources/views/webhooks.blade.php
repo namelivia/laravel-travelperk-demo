@@ -31,7 +31,7 @@ Webdhooks
             <td>{{ $webhook->url }}</td>
             <td>{{ $webhook->secret }}</td>
             <td>{{ $webhook->enabled ? 'Yes' : 'No'}}</td>
-            <td>{{ json_encode($webhook->events) }}</td>
+            <td>{{ implode($webhook->events) }}</td>
             <td>{{ $webhook->successfully_sent }}</td>
             <td>{{ $webhook->failed_sent }}</td>
             <td>{{ $webhook->error_rate }}</td>
