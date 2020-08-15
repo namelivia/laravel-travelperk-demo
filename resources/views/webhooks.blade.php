@@ -18,6 +18,7 @@ Webdhooks
             <th>Sucessfully sent</th>
             <th>Failed sent</th>
             <th>Error rate</th>
+            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
@@ -36,6 +37,16 @@ Webdhooks
             <td>{{ $webhook->successfully_sent }}</td>
             <td>{{ $webhook->failed_sent }}</td>
             <td>{{ $webhook->error_rate }}</td>
+            <td>
+                <form method="POST" action="/webhooks/{{$webhook->id}}">
+                    @csrf
+                    {{ method_field('DELETE') }}
+
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-danger" value="Delete webhook">
+                    </div>
+                </form>
+            </td>
         </tr>
         @endforeach
     </tbody>

@@ -21,4 +21,7 @@ Route::get('/invoice-lines', 'InvoicesController@lines')->name('invoice-lines');
 Route::get('/users', 'UsersController@all')->name('users');
 Route::get('/discovery', 'DiscoveryController@discovery')->name('discovery');
 Route::get('/webhooks', 'WebhooksController@all')->name('webhooks');
+Route::get('/webhooks/create', 'WebhooksController@create')->name('create-webhook');
 Route::get('/webhooks/{id}', 'WebhooksController@view')->name('webhook');
+Route::post('/webhooks/create', 'WebhooksController@save');
+Route::delete('/webhooks/{id}', 'WebhooksController@delete')->name('delete-webhook');
