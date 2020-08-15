@@ -16,7 +16,8 @@ class WebhooksController extends Controller
     public function all()
     {
         return view('webhooks', [
-            'response' => TravelPerk::webhooks()->webhooks()->all()
+            'response' => TravelPerk::webhooks()->webhooks()->all(),
+            'events' => TravelPerk::webhooks()->webhooks()->events(),
         ]);
     }
 

@@ -5,6 +5,7 @@ Webdhooks
 @endsection
 
 @section('content')
+<h2>Webhooks</h2>
 <table class="table table-sm table-striped table-bordered">
     <thead class="thead-dark">
         <tr>
@@ -35,6 +36,23 @@ Webdhooks
             <td>{{ $webhook->successfully_sent }}</td>
             <td>{{ $webhook->failed_sent }}</td>
             <td>{{ $webhook->error_rate }}</td>
+        </tr>
+        @endforeach
+    </tbody>
+</table>
+<h2>Events</h2>
+<table class="table table-sm table-striped table-bordered">
+    <thead class="thead-dark">
+        <tr>
+            <th>Name</th>
+            <th>Topic</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach($events as $event)
+        <tr>
+            <td>{{ $event->name }}</td>
+            <td>{{ $event->topic }}</td>
         </tr>
         @endforeach
     </tbody>
