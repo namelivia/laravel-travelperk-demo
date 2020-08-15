@@ -1,0 +1,42 @@
+@extends('layouts.layout')
+
+@section('title')
+Webdhooks
+@endsection
+
+@section('content')
+<table class="table table-sm table-striped table-bordered">
+    <thead class="thead-dark">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>URL</th>
+            <th>Secret</th>
+            <th>Enabled</th>
+            <th>Events</th>
+            <th>Sucessfully sent</th>
+            <th>Failed sent</th>
+            <th>Error rate</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach($response->webhooks as $webhook)
+        <tr>
+            <td>
+                <a href="{{route('webhook', ['id' => $webhook->id])}}">
+                    {{ $webhook->id }}
+                </a>
+            </td>
+            <td>{{ $webhook->name }}</td>
+            <td>{{ $webhook->url }}</td>
+            <td>{{ $webhook->secret }}</td>
+            <td>{{ $webhook->enabled ? 'Yes' : 'No'}}</td>
+            <td>{{ json_encode($webhook->events) }}</td>
+            <td>{{ $webhook->successfully_sent }}</td>
+            <td>{{ $webhook->failed_sent }}</td>
+            <td>{{ $webhook->error_rate }}</td>
+        </tr>
+        @endforeach
+    </tbody>
+</table>
+@endsection

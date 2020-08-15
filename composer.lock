@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bf12725ae85774fe4499e3cbb7594aac",
+    "content-hash": "efd043117db32f51019099b108eb1df9",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1410,23 +1410,23 @@
         },
         {
             "name": "namelivia/laravel-travelperk",
-            "version": "0.0.5",
+            "version": "0.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/namelivia/laravel-travelperk.git",
-                "reference": "efe0177034ecf49f26fc7dcf469da4485ba71188"
+                "reference": "e0d877b0ec829225ffcd378d8c5288d608dd87e2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/namelivia/laravel-travelperk/zipball/efe0177034ecf49f26fc7dcf469da4485ba71188",
-                "reference": "efe0177034ecf49f26fc7dcf469da4485ba71188",
+                "url": "https://api.github.com/repos/namelivia/laravel-travelperk/zipball/e0d877b0ec829225ffcd378d8c5288d608dd87e2",
+                "reference": "e0d877b0ec829225ffcd378d8c5288d608dd87e2",
                 "shasum": ""
             },
             "require": {
                 "graham-campbell/manager": "3.*|4.*",
                 "illuminate/contracts": "5.5.*|5.6.*|5.7.*|5.8.*|6.*|7.*",
                 "illuminate/support": "5.5.*|5.6.*|5.7.*|5.8.*|6.*|7.*",
-                "namelivia/travelperk-http-php": "^0.0.6",
+                "namelivia/travelperk-http-php": "^0.0.7",
                 "php": "^7.3"
             },
             "require-dev": {
@@ -1467,20 +1467,20 @@
                 "laravel",
                 "travelperk"
             ],
-            "time": "2020-08-15T09:21:22+00:00"
+            "time": "2020-08-15T15:34:27+00:00"
         },
         {
             "name": "namelivia/travelperk-http-php",
-            "version": "0.0.6",
+            "version": "0.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/namelivia/travelperk-http-php.git",
-                "reference": "3dfe73f52e4c6d89fe80652607e6c555c4c131df"
+                "reference": "04e4a9af06a8eaa16fc800ac36eb6684b326c54a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/namelivia/travelperk-http-php/zipball/3dfe73f52e4c6d89fe80652607e6c555c4c131df",
-                "reference": "3dfe73f52e4c6d89fe80652607e6c555c4c131df",
+                "url": "https://api.github.com/repos/namelivia/travelperk-http-php/zipball/04e4a9af06a8eaa16fc800ac36eb6684b326c54a",
+                "reference": "04e4a9af06a8eaa16fc800ac36eb6684b326c54a",
                 "shasum": ""
             },
             "require": {
@@ -1515,7 +1515,7 @@
                 "sdk",
                 "travelperk"
             ],
-            "time": "2020-08-14T21:29:06+00:00"
+            "time": "2020-08-15T15:28:46+00:00"
         },
         {
             "name": "nesbot/carbon",
@@ -5503,16 +5503,16 @@
         },
         {
             "name": "phpdocumentor/reflection-docblock",
-            "version": "5.2.0",
+            "version": "5.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
-                "reference": "3170448f5769fe19f456173d833734e0ff1b84df"
+                "reference": "d870572532cd70bc3fab58f2e23ad423c8404c44"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/3170448f5769fe19f456173d833734e0ff1b84df",
-                "reference": "3170448f5769fe19f456173d833734e0ff1b84df",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/d870572532cd70bc3fab58f2e23ad423c8404c44",
+                "reference": "d870572532cd70bc3fab58f2e23ad423c8404c44",
                 "shasum": ""
             },
             "require": {
@@ -5551,7 +5551,7 @@
                 }
             ],
             "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
-            "time": "2020-07-20T20:05:34+00:00"
+            "time": "2020-08-15T11:14:08+00:00"
         },
         {
             "name": "phpdocumentor/type-resolver",
@@ -5911,6 +5911,7 @@
             "keywords": [
                 "tokenizer"
             ],
+            "abandoned": true,
             "time": "2019-09-17T06:23:10+00:00"
         },
         {

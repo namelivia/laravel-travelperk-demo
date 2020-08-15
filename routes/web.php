@@ -20,3 +20,5 @@ Route::get('/invoice-profiles', 'InvoicesController@profiles')->name('invoice-pr
 Route::get('/invoice-lines', 'InvoicesController@lines')->name('invoice-lines');
 Route::get('/users', 'UsersController@all')->name('users');
 Route::get('/discovery', 'DiscoveryController@discovery')->name('discovery');
+Route::get('/webhooks', 'WebhooksController@all')->name('webhooks');
+Route::get('/webhooks/{id}', 'WebhooksController@view')->name('webhook');
