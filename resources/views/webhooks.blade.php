@@ -38,12 +38,15 @@ Webdhooks
             <td>{{ $webhook->failed_sent }}</td>
             <td>{{ $webhook->error_rate }}</td>
             <td>
+                <a href="{{route('modify-webhook', ['id' => $webhook->id])}}">
+                    <button class="btn btn-primary">Update</button>
+                </a>
                 <form method="POST" action="/webhooks/{{$webhook->id}}">
                     @csrf
                     {{ method_field('DELETE') }}
 
                     <div class="form-group">
-                        <input type="submit" class="btn btn-danger" value="Delete webhook">
+                        <input type="submit" class="btn btn-danger" value="Delete">
                     </div>
                 </form>
             </td>

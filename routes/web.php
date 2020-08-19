@@ -24,4 +24,7 @@ Route::get('/webhooks', 'WebhooksController@all')->name('webhooks');
 Route::get('/webhooks/create', 'WebhooksController@create')->name('create-webhook');
 Route::get('/webhooks/{id}', 'WebhooksController@view')->name('webhook');
 Route::post('/webhooks/create', 'WebhooksController@save');
+Route::get('/webhooks/{id}/modify', 'WebhooksController@modify')->name('modify-webhook');
+Route::post('/webhooks/{id}/modify', 'WebhooksController@update');
 Route::delete('/webhooks/{id}', 'WebhooksController@delete')->name('delete-webhook');
+Route::post('/webhooks/{id}/test', 'WebhooksController@test')->name('test-webhook');
