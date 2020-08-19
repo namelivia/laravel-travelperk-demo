@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Namelivia\TravelPerk\Laravel\Facades\TravelPerk;
 use Namelivia\TravelPerk\Webhooks\CreateWebhookInputParams;
+use Namelivia\TravelPerk\Webhooks\UpdateWebhookInputParams;
+use Namelivia\TravelPerk\Webhooks\WebhooksInputParams;
 use Illuminate\Http\Request;
 
 class WebhooksController extends Controller
@@ -14,10 +16,27 @@ class WebhooksController extends Controller
      *
      * @return View
      */
-    public function all()
+    public function all(Request $request)
     {
+        $params = new WebhooksInputParams();
+
+        $limit = $request->input("limit");
+		if (isset($limit)) {
+			$params->setLimit($limit);
+		}
+
+        $accountNumber = $request->input("account_number");
+		if (isset($accountNumber)) {
+			$params->setTravelperkBankAccountNumber($accountNumber);
+		}
+
+        $offset = $request->input("offset");
+		if (isset($offset)) {
+			$params->setOffset($offset);
+		}
+
         return view('webhooks', [
-            'response' => TravelPerk::webhooks()->webhooks()->all(),
+            'response' => TravelPerk::webhooks()->webhooks()->all($params),
             'events' => TravelPerk::webhooks()->webhooks()->events(),
         ]);
     }
@@ -104,11 +123,28 @@ class WebhooksController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $webhook= TravelPerk::webhooks()->webhooks()->update($id);
-        return view('webhook', [
+        $params = new UpdateWebhookInputParams();
+
+        $name = $request->input("name");
+		if (isset($name)) {
+			$params->setName($name);
+		}
+
+        $secret = $request->input("secret");
+		if (isset($secret)) {
+			$params->setSecret($secret);
+		}
+
+        $events = $request->input("events");
+		if (isset($events)) {
+			$params->setEvents($events);
+		}
+
+        $webhook = TravelPerk::webhooks()->webhooks()->update($id, $params);
+
+        return view('modify-webhook', [
             'data' => $webhook,
-            'error' => null,
-            'response' => null,
+            'events' => TravelPerk::webhooks()->webhooks()->events(),
         ]);
     }
 

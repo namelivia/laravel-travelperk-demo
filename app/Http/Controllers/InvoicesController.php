@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use Namelivia\TravelPerk\Laravel\Facades\TravelPerk;
 use Namelivia\TravelPerk\Expenses\InvoicesInputParams;
 use Namelivia\TravelPerk\Expenses\InvoiceLinesInputParams;
-use Illuminate\Support\Facades\Request;
+use Illuminate\Http\Request;
 
 class InvoicesController extends Controller
 {
@@ -15,21 +15,21 @@ class InvoicesController extends Controller
      *
      * @return View
      */
-    public function all()
+    public function all(Request $request)
     {
         $params = new InvoicesInputParams();
 
-        $limit = Request::input("limit");
+        $limit = $request->input("limit");
 		if (isset($limit)) {
 			$params->setLimit($limit);
 		}
 
-        $accountNumber = Request::input("account_number");
+        $accountNumber = $request->input("account_number");
 		if (isset($accountNumber)) {
 			$params->setTravelperkBankAccountNumber($accountNumber);
 		}
 
-        $offset = Request::input("offset");
+        $offset = $request->input("offset");
 		if (isset($offset)) {
 			$params->setOffset($offset);
 		}
@@ -66,21 +66,21 @@ class InvoicesController extends Controller
      *
      * @return View
      */
-    public function lines()
+    public function lines(Request $request)
     {
         $params = new InvoiceLinesInputParams();
 
-        $limit = Request::input("limit");
+        $limit = $request->input("limit");
 		if (isset($limit)) {
 			$params->setLimit($limit);
 		}
 
-        $accountNumber = Request::input("account_number");
+        $accountNumber = $request->input("account_number");
 		if (isset($accountNumber)) {
 			$params->setTravelperkBankAccountNumber($accountNumber);
 		}
 
-        $offset = Request::input("offset");
+        $offset = $request->input("offset");
 		if (isset($offset)) {
 			$params->setOffset($offset);
 		}
