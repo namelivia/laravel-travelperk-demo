@@ -7,6 +7,10 @@ Update Webhook
 @section('content')
 <form method="POST" action="/webhooks/{{$data->id}}/modify">
     @csrf
+    <div class="form-check">
+        <input id="enabled" {{ $data->enabled ? 'checked="checked"' : '' }} value="1" name="enabled" type="checkbox" class="form-check-input">
+        <label class="form-check-label" for="enabled">Enabled</label>
+    </div>
     <div class="form-group">
         <label for="name">Name</label>
         <input id="name" value="{{$data->name}}" name="name" type="text" class="form-control">

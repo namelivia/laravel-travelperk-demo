@@ -5,13 +5,6 @@ Webdhooks
 @endsection
 
 @section('content')
-<form method="GET" action="/webhooks">
-    <label for="offset">Offset</label>
-    <input id="offset" name="offset" type="number">
-    <label for="limit">Limit</label>
-    <input id="limit" name="limit" type="number">
-    <input type="submit" value="Apply"/>
-</form>
 <table class="table table-sm table-striped table-bordered">
     <thead class="thead-dark">
         <tr>

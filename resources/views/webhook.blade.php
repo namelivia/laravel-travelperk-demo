@@ -33,12 +33,6 @@ Webhook {{ $data->id }}
     <div class="card-body">
         <form method="POST" action="/webhooks/{{$data->id}}/test">
             @csrf
-            <div class="form-group">
-                <label for="testData">Test Data</label>
-                <input id="testData" name="testData" type="text" class="form-control">
-            </div>
-			<p>{{$error}}</p>
-			<p>{{$response}}</p>
             <input class="btn btn-success" type="submit" value="Test"/>
         </form>
     </div>

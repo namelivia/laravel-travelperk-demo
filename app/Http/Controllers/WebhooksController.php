@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use Namelivia\TravelPerk\Laravel\Facades\TravelPerk;
 use Namelivia\TravelPerk\Webhooks\CreateWebhookInputParams;
 use Namelivia\TravelPerk\Webhooks\UpdateWebhookInputParams;
-use Namelivia\TravelPerk\Webhooks\WebhooksInputParams;
 use Illuminate\Http\Request;
 
 class WebhooksController extends Controller
@@ -16,27 +15,10 @@ class WebhooksController extends Controller
      *
      * @return View
      */
-    public function all(Request $request)
+    public function all()
     {
-        $params = new WebhooksInputParams();
-
-        $limit = $request->input("limit");
-		if (isset($limit)) {
-			$params->setLimit($limit);
-		}
-
-        $accountNumber = $request->input("account_number");
-		if (isset($accountNumber)) {
-			$params->setTravelperkBankAccountNumber($accountNumber);
-		}
-
-        $offset = $request->input("offset");
-		if (isset($offset)) {
-			$params->setOffset($offset);
-		}
-
         return view('webhooks', [
-            'response' => TravelPerk::webhooks()->webhooks()->all($params),
+            'response' => TravelPerk::webhooks()->webhooks()->all(),
             'events' => TravelPerk::webhooks()->webhooks()->events(),
         ]);
     }
@@ -50,8 +32,6 @@ class WebhooksController extends Controller
     {
         $webhook = TravelPerk::webhooks()->webhooks()->get($id);
         return view('webhook', [
-            'error' => null,
-            'response' => null,
             'data' => $webhook,
         ]);
     }
@@ -96,8 +76,6 @@ class WebhooksController extends Controller
             $request->input('events'),
         ));
         return view('webhook', [
-            'error' => null,
-            'response' => null,
             'data' => $webhook,
         ]);
     }
@@ -135,6 +113,18 @@ class WebhooksController extends Controller
 			$params->setSecret($secret);
 		}
 
+        $url = $request->input("url");
+		if (isset($url)) {
+			$params->setUrl($url);
+		}
+
+        $enabled = $request->input("enabled");
+		if (isset($enabled)) {
+			$params->setEnabled(true);
+        } else {
+			$params->setEnabled(false);
+        }
+
         $events = $request->input("events");
 		if (isset($events)) {
 			$params->setEvents($events);
@@ -155,19 +145,10 @@ class WebhooksController extends Controller
      */
     public function test(Request $request, $id)
     {
-        $error = null;
-        $response = null;
-        $payload = (array) json_decode($request->input("testData"));
-        try {
-            $response = TravelPerk::webhooks()->webhooks()->test($id, $payload);
-        } catch (\Exception $e){
-            $error = $e->getMessage();
-        }
+        $response = TravelPerk::webhooks()->webhooks()->test($id);
         $webhook = TravelPerk::webhooks()->webhooks()->get($id);
         return view('webhook', [
-            'data' => $webhook,
-            'error' => $error,
-            'response' => $response,
+            'data' => $webhook
         ]);
     }
 }
