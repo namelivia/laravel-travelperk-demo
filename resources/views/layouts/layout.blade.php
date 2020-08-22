@@ -13,7 +13,7 @@
         <main class="container mt-5 mb-6">
 			@yield('content')
         </main>
-		<footer class="footer mt-auto py-3 fixed-bottom bg-primary">
+		<footer class="footer mt-auto py-3 fixed-bottom text-center">
 			@include('layouts.footer')
 		</footer>
         <script src="{{ mix('js/app.js') }}"></script>
