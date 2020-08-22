@@ -58,7 +58,9 @@ class InvoicesController extends Controller
      */
     public function profiles()
     {
-        return view('invoice-profiles', ['data' => TravelPerk::expenses()->invoiceProfiles()->all()]);
+        return view('invoice-profiles', [
+            'data' => TravelPerk::expenses()->invoiceProfiles()->all()
+        ]);
     }
 
     /**
@@ -70,24 +72,20 @@ class InvoicesController extends Controller
     {
         $params = new InvoiceLinesInputParams();
 
-        $limit = $request->input("limit");
+        // Statically fixing the limit to 10 by now
+        /*$limit = $request->input("limit");
 		if (isset($limit)) {
 			$params->setLimit($limit);
-		}
+        }*/
+		$params->setLimit(50);
 
-        $accountNumber = $request->input("account_number");
-		if (isset($accountNumber)) {
-			$params->setTravelperkBankAccountNumber($accountNumber);
-		}
-
-        $offset = $request->input("offset");
+        $offset = $request->input("page");
 		if (isset($offset)) {
 			$params->setOffset($offset);
 		}
 
         return view('invoice-lines', [
-            'response' => TravelPerk::expenses()->invoices()->lines($params),
-            'account_number' => $accountNumber,
+            'response' => TravelPerk::expenses()->invoices()->lines($params)
         ]);
     }
 }
