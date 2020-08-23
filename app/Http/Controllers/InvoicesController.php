@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Namelivia\TravelPerk\Laravel\Facades\TravelPerk;
 use Namelivia\TravelPerk\Expenses\InvoicesInputParams;
 use Namelivia\TravelPerk\Expenses\InvoiceLinesInputParams;
+use Namelivia\TravelPerk\Pagination\Pagination;
 use Illuminate\Http\Request;
 
 class InvoicesController extends Controller
@@ -58,10 +59,15 @@ class InvoicesController extends Controller
      *
      * @return View
      */
-    public function profiles()
+    public function profiles(Request $request)
     {
+        // Statically fixing the limit to 15 by now
+        $limit = 15;
+        $page = $request->input("page");
+        $offset = $page ? $page * $limit : 0;
+        $params = new Pagination($offset, $limit);
         return view('invoice-profiles', [
-            'data' => TravelPerk::expenses()->invoiceProfiles()->all()
+            'response' => TravelPerk::expenses()->invoiceProfiles()->all($params),
         ]);
     }
 
