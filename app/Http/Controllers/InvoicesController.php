@@ -21,20 +21,17 @@ class InvoicesController extends Controller
         $params = new InvoicesInputParams();
 
         // Statically fixing the limit to 50 by now
-        /*$limit = $request->input("limit");
-		if (isset($limit)) {
-			$params->setLimit($limit);
-        }*/
-		$params->setLimit(50);
+        $limit = 50;
+		$params->setLimit($limit);
 
         $accountNumber = $request->input("account_number");
 		if (isset($accountNumber)) {
 			$params->setTravelperkBankAccountNumber($accountNumber);
         }
 
-        $offset = $request->input("page");
-		if (isset($offset)) {
-			$params->setOffset($offset);
+        $page = $request->input("page");
+		if (isset($page)) {
+			$params->setOffset($page * $limit);
 		}
 
         return view('invoices', [
@@ -81,15 +78,12 @@ class InvoicesController extends Controller
         $params = new InvoiceLinesInputParams();
 
         // Statically fixing the limit to 50 by now
-        /*$limit = $request->input("limit");
-		if (isset($limit)) {
-			$params->setLimit($limit);
-        }*/
-		$params->setLimit(50);
+        $limit = 50;
+		$params->setLimit($limit);
 
-        $offset = $request->input("page");
-		if (isset($offset)) {
-			$params->setOffset($offset);
+        $page = $request->input("page");
+		if (isset($page)) {
+			$params->setOffset($page * $limit);
 		}
 
         return view('invoice-lines', [
