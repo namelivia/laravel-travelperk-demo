@@ -27,10 +27,6 @@ Webhook {{ $data->id }}
   			<dt class="col-sm-3">Error Rate</dt>
   			<dd class="col-sm-9">{{$data->error_rate}}</dd>
 		</dl>
-    </div>
-</div>
-<div class="card">
-    <div class="card-body">
         <form method="POST" action="/webhooks/{{$data->id}}/test">
             @csrf
             <input class="btn btn-success" type="submit" value="Test"/>

@@ -5,14 +5,15 @@ Webdhooks
 @endsection
 
 @section('content')
+<div class="mb-2 text-right">
+    <a class="btn btn-primary" href="{{route('create-webhook')}}">New Webhook</a>
+</div>
 <table class="table table-sm table-striped table-bordered">
     <thead class="thead-dark">
         <tr>
-            <th>Id</th>
+            <th>Enabled</th>
             <th>Name</th>
             <th>URL</th>
-            <th>Secret</th>
-            <th>Enabled</th>
             <th>Events</th>
             <th>Sucessfully sent</th>
             <th>Failed sent</th>
@@ -23,31 +24,31 @@ Webdhooks
     <tbody>
         @foreach($response->webhooks as $webhook)
         <tr>
+            <td>{{ $webhook->enabled ? 'Yes' : 'No'}}</td>
             <td>
                 <a href="{{route('webhook', ['id' => $webhook->id])}}">
-                    {{ $webhook->id }}
+                    {{ $webhook->name }}
                 </a>
             </td>
-            <td>{{ $webhook->name }}</td>
             <td>{{ $webhook->url }}</td>
-            <td>{{ $webhook->secret }}</td>
-            <td>{{ $webhook->enabled ? 'Yes' : 'No'}}</td>
             <td>{{ implode($webhook->events) }}</td>
             <td>{{ $webhook->successfully_sent }}</td>
             <td>{{ $webhook->failed_sent }}</td>
             <td>{{ $webhook->error_rate }}</td>
             <td>
-                <a href="{{route('modify-webhook', ['id' => $webhook->id])}}">
-                    <button class="btn btn-primary">Update</button>
-                </a>
-                <form method="POST" action="/webhooks/{{$webhook->id}}">
-                    @csrf
-                    {{ method_field('DELETE') }}
+                <div class="btn-group" role="group">
+                    <a href="{{route('modify-webhook', ['id' => $webhook->id])}}">
+                        <button class="btn btn-primary">Update</button>
+                    </a>
+                    <form method="POST" action="/webhooks/{{$webhook->id}}">
+                        @csrf
+                        {{ method_field('DELETE') }}
 
-                    <div class="form-group">
-                        <input type="submit" class="btn btn-danger" value="Delete">
-                    </div>
-                </form>
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-danger" value="Delete">
+                        </div>
+                    </form>
+                </div>
             </td>
         </tr>
         @endforeach

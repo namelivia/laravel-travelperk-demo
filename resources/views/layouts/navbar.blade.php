@@ -21,11 +21,8 @@
       <li class="nav-item {{ \Str::contains(request()->route()->getName(),'discovery') ? 'active' : ''}}">
         <a class="nav-link" href="{{route('discovery')}}">Discovery</a>
       </li>
-      <li class="nav-item {{ \Str::contains(request()->route()->getName(),'webhooks') ? 'active' : ''}}">
+      <li class="nav-item {{ \Str::contains(request()->route()->getName(),'webhook') ? 'active' : ''}}">
         <a class="nav-link" href="{{route('webhooks')}}">Webhooks</a>
-      </li>
-      <li class="nav-item {{ \Str::contains(request()->route()->getName(),'create-webhook') ? 'active' : ''}}">
-        <a class="nav-link" href="{{route('create-webhook')}}">Create Webhook</a>
       </li>
     </ul>
   </div>
