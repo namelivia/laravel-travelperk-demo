@@ -57,7 +57,7 @@ Invoices Profiles
     </tbody>
 </table>
 Total: {{ $response->total }} | Page: {{ $response->offset }} | PageSize: {{ $response->limit }}
-<nav aria-label="Page navigation example">
+<nav aria-label="Pagination">
   <ul class="pagination">
     <li class="page-item {{ $response->offset == 0 ? 'disabled' : ''}}">
         <a class="page-link" href="?page={{$response->offset - 1}}">Previous</a>

@@ -5,15 +5,6 @@ Invoices
 @endsection
 
 @section('content')
-<form method="GET" action="/invoices">
-    <label for="offset">Offset</label>
-    <input id="offset" name="offset" type="number" value="{{ $response->offset}}">
-    <label for="limit">Limit</label>
-    <input id="limit" name="limit" type="number" value="{{ $response->limit }}">
-    <label for="account_number">TravelPerk Bank Account Number</label>
-    <input id="account_number" name="account_number" type="text" value="{{ $account_number }}">
-    <input type="submit" value="Apply"/>
-</form>
 <table class="table table-sm table-striped table-bordered">
     <thead class="thead-dark">
         <tr>
@@ -44,4 +35,18 @@ Invoices
         @endforeach
     </tbody>
 </table>
+Total: {{ $response->total }} | Page: {{ $response->offset }} | PageSize: {{ $response->limit }}
+<nav aria-label="Pagination">
+  <ul class="pagination">
+    <li class="page-item {{ $response->offset == 0 ? 'disabled' : ''}}">
+        <a class="page-link" href="?page={{$response->offset - 1}}">Previous</a>
+    </li>
+    @foreach (range(0, ($response->total/$response->limit)) as $page)
+        <li class="page-item {{ $loop->index == $response->offset ? 'active' : ''}}">
+            <a class="page-link" href="?page={{$page}}">{{$page + 1}}</a>
+        </li>
+    @endforeach
+    <li class="page-item"><a class="page-link" href="?page={{$response->offset + 1}}">Next</a></li>
+  </ul>
+</nav>
 @endsection
