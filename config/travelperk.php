@@ -32,10 +32,12 @@ return [
 
         'main' => [
             'api_key' => env('TRAVELPERK_API_KEY', 'your-api-key'),
+            'is_sandbox' => false,
         ],
 
         'alternative' => [
             'api_ket' => 'your-client-id',
+            'is_sandbox' => false,
         ],
 
     ],
