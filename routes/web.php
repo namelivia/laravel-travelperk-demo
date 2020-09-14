@@ -28,3 +28,9 @@ Route::get('/webhooks/{id}/modify', 'WebhooksController@modify')->name('modify-w
 Route::post('/webhooks/{id}/modify', 'WebhooksController@update');
 Route::delete('/webhooks/{id}', 'WebhooksController@delete')->name('delete-webhook');
 Route::post('/webhooks/{id}/test', 'WebhooksController@test')->name('test-webhook');
+Route::get('/users/create', 'UsersController@create')->name('create-user');
+Route::get('/users/{id}', 'UsersController@view')->name('user');
+Route::post('/users/create', 'UsersController@save');
+Route::get('/users/{id}/modify', 'UsersController@modify')->name('modify-user');
+Route::post('/users/{id}/modify', 'UsersController@update');
+Route::delete('/users/{id}', 'UsersController@delete')->name('delete-user');
