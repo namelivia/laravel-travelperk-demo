@@ -68,4 +68,5 @@ Schemas:
         @endforeach
     </tbody>
 </table>
+@include('layouts.pagination')
 @endsection

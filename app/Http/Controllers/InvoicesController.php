@@ -32,10 +32,11 @@ class InvoicesController extends Controller
         $page = $request->input("page");
 		if (isset($page)) {
 			$params->setOffset($page * $limit);
-		}
+        }
+        $response = TravelPerk::expenses()->invoices()->all($params);
 
         return view('invoices', [
-            'response' => TravelPerk::expenses()->invoices()->all($params),
+            'response' => $response,
             'account_number' => $accountNumber,
         ]);
     }

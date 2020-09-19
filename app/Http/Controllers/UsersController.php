@@ -4,7 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Namelivia\TravelPerk\Laravel\Facades\TravelPerk;
-use Illuminate\Support\Facades\Request;
+use Namelivia\TravelPerk\SCIM\UsersInputParams;
+use Namelivia\TravelPerk\SCIM\CreateUserInputParams;
+use Namelivia\TravelPerk\SCIM\UpdateUserInputParams;
+use Namelivia\TravelPerk\SCIM\NameInputParams;
+use Illuminate\Http\Request;
 
 class UsersController extends Controller
 {
@@ -13,10 +17,25 @@ class UsersController extends Controller
      *
      * @return View
      */
-    public function all()
-    {
+    public function all(Request $request)
+	{
+        $params = new UsersInputParams();
+
+        // Statically fixing the limit to 10 by now
+        $limit = 10;
+		$params->setCount($limit);
+
+        $page = $request->input("page");
+		if (isset($page)) {
+			$params->setStartIndex(($page * $limit) + 1);
+		}
+
+		$data = TravelPerk::scim()->users()->all($params);
+		$data->total = $data->totalResults;
+		$data->limit = $limit;
+		$data->offset = $data->startIndex - 1;
         return view('users', [
-            'response' => TravelPerk::scim()->users()->all(),
+            'response' => $data,
         ]);
     }
 
@@ -63,9 +82,17 @@ class UsersController extends Controller
      */
     public function save(Request $request)
     {
-        $user = TravelPerk::scim()->users()->create();
+        $user = TravelPerk::scim()->users()->create(new CreateUserInputParams(
+            $request->input('userName'),
+			true, #Always active
+			(new NameInputParams(
+				$request->input('givenName'),
+				$request->input('familyName')
+			)),
+        ));
+		#TODO: json decode should be done on the lib
         return view('user', [
-            'data' => $user,
+            'data' => json_decode($user),
         ]);
     }
 
@@ -76,9 +103,13 @@ class UsersController extends Controller
      */
     public function delete(string $id)
     {
-        $webhook = TravelPerk::scim()->users()->delete($id);
+        TravelPerk::scim()->users()->delete($id);
+		$data = TravelPerk::scim()->users()->all();
+		$data->total = $data->totalResults;
+		$data->limit = $data->itemsPerPage;
+		$data->offset = $data->startIndex;
         return view('users', [
-            'response' => TravelPerk::scim()->users()->all()
+            'response' => $data
         ]);
     }
 
@@ -89,6 +120,16 @@ class UsersController extends Controller
      */
     public function update(Request $request, $id)
     {
-		//TODO
+        $params = new UpdateUserInputParams();
+
+        $userName = $request->input("userName");
+		if (isset($userName)) {
+			$params->setUserName($userName);
+		}
+
+        $user = TravelPerk::scim()->users()->update($id, $params);
+        return view('modify-user', [
+            'data' => $user
+        ]);
     }
 }

@@ -8,8 +8,8 @@ Create User
 <form method="POST" action="/users/create">
     @csrf
     <div class="form-group">
-        <label for="name">Username</label>
-        <input id="username" name="username" type="text" class="form-control">
+        <label for="userName">Username</label>
+        <input id="userName" name="userName" type="text" class="form-control">
     </div>
     <div class="form-group">
         <label for="givenName">Given Name</label>
