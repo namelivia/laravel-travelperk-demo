@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use Namelivia\TravelPerk\Laravel\Facades\TravelPerk;
 use Namelivia\TravelPerk\SCIM\UsersInputParams;
 use Namelivia\TravelPerk\SCIM\CreateUserInputParams;
-use Namelivia\TravelPerk\SCIM\UpdateUserInputParams;
+use Namelivia\TravelPerk\SCIM\ReplaceUserInputParams;
 use Namelivia\TravelPerk\SCIM\NameInputParams;
 use Illuminate\Http\Request;
 
@@ -120,14 +120,14 @@ class UsersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $params = new UpdateUserInputParams();
-
-        $userName = $request->input("userName");
-		if (isset($userName)) {
-			$params->setUserName($userName);
-		}
-
-        $user = TravelPerk::scim()->users()->update($id, $params);
+		$user = TravelPerk::scim()->users()->replace($id, new ReplaceUserInputParams(
+            $request->input('userName'),
+			true, #Always active
+			(new NameInputParams(
+				$request->input('givenName'),
+				$request->input('familyName')
+			)),
+		));
         return view('modify-user', [
             'data' => $user
         ]);
