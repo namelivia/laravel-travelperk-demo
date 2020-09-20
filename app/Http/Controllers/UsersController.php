@@ -82,13 +82,22 @@ class UsersController extends Controller
      */
     public function save(Request $request)
     {
+		$name = new NameInputParams(
+			$request->input('givenName'),
+			$request->input('familyName')
+		);
+        $middleName = $request->input("middleName");
+		if (isset($middleName)) {
+			$name->setMiddleName($middleName);
+		}
+        $honorificPrefix = $request->input("honorificPrefix");
+		if (isset($honorificPrefix)) {
+			$name->setHonorificPrefix($honorificPrefix);
+		}
         $user = TravelPerk::scim()->users()->create(new CreateUserInputParams(
             $request->input('userName'),
 			true, #Always active
-			(new NameInputParams(
-				$request->input('givenName'),
-				$request->input('familyName')
-			)),
+			$name
         ));
 		#TODO: json decode should be done on the lib
         return view('user', [
@@ -120,13 +129,22 @@ class UsersController extends Controller
      */
     public function update(Request $request, $id)
     {
+		$name = new NameInputParams(
+			$request->input('givenName'),
+			$request->input('familyName')
+		);
+        $middleName = $request->input("middleName");
+		if (isset($middleName)) {
+			$name->setMiddleName($middleName);
+		}
+        $honorificPrefix = $request->input("honorificPrefix");
+		if (isset($honorificPrefix)) {
+			$name->setHonorificPrefix($honorificPrefix);
+		}
 		$user = TravelPerk::scim()->users()->replace($id, new ReplaceUserInputParams(
             $request->input('userName'),
 			true, #Always active
-			(new NameInputParams(
-				$request->input('givenName'),
-				$request->input('familyName')
-			)),
+			$name
 		));
         return view('modify-user', [
             'data' => $user
