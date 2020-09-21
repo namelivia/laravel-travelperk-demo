@@ -21,6 +21,74 @@ Update User
                 <label for="familyName">Family Name</label>
                 <input id="familyName" value="{{$data->name->familyName}}" name="familyName" type="text" class="form-control">
             </div>
+            <div class="form-group">
+                <label for="middleName">Middle Name</label>
+                <input id="middleName" value="{{$data->name->middleName}}" name="middleName" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="honorificPrefix">Honorific Prefix</label>
+                <input id="honorificPrefix" value="{{$data->name->honorificPrefix}} "name="honorificPrefix" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="language">Language</label>
+                <select id="language" name="language" class="form-control">
+                    @foreach($languages as $language)
+                        <option value="{{$language}}"
+                        @if ($language === $data->preferredLanguage) selected @endif >
+                        {{$language}}</option>
+                    @endforeach
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="locale">Locale</label>
+                <input id="locale" value="{{$data->locale}}" name="locale" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input id="title" value="{{$data->title}}" name="title" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="externalId">External Id</label>
+                <input id="externalId" value="{{$data->externalId}}" name="externalId" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="phoneNumbern">Phone Number</label>
+                <input id="phoneNumber" value="{{$data->phoneNumbers[0]->value}}" name="phoneNumber" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <select id="gender" name="gender" class="form-control">
+                    @foreach($genders as $gender)
+                        <option value="{{$gender}}"
+                        @if ($gender === $data->{'urn:ietf:params:scim:schemas:extension:travelperk:2.0:User'}->gender) selected @endif >
+                        {{$gender}}</option>
+                    @endforeach
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="dateOfBirth">Date of Birth</label>
+                <input id="dateOfBirth" value="{{$data->{'urn:ietf:params:scim:schemas:extension:travelperk:2.0:User'}->dateOfBirth}}" name="dateOfBirth" type="date" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="travelPolicy">Travel Policy</label>
+                <input id="travelPolicy" value="{{$data->{'urn:ietf:params:scim:schemas:extension:travelperk:2.0:User'}->travelPolicy}}" name="travelPolicy" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="costCenter">Cost Center</label>
+                <input id="costCenter" value="{{$data->{'urn:ietf:params:scim:schemas:extension:enterprise:2.0:User'}->costCenter}}" name="costCenter" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="manager">Manager</label>
+                <input id="manager" value="{{$data->{'urn:ietf:params:scim:schemas:extension:enterprise:2.0:User'}->manager->value}}" name="manager" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="emergencyContactName">Emergency Contact Name</label>
+                <input id="emergencyContactName" value="{{$data->{'urn:ietf:params:scim:schemas:extension:travelperk:2.0:User'}->emergencyContact->name}}" name="emergencyContactName" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="emergencyContactPhone">Emergency Contact Phone</label>
+                <input id="emergencyContactPhone" value="{{$data->{'urn:ietf:params:scim:schemas:extension:travelperk:2.0:User'}->emergencyContact->phone}}" name="emergencyContactPhone" type="text" class="form-control">
+            </div>
             <input class="btn btn-primary" type="submit" value="Update"/>
         </form>
     </div>

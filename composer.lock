@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bbac7ab8b358946fe78a03c3cf59f2b8",
+    "content-hash": "ff4dd6e7d48ffcdd00557bb563a65188",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -366,16 +366,16 @@
         },
         {
             "name": "egulias/email-validator",
-            "version": "2.1.20",
+            "version": "2.1.21",
             "source": {
                 "type": "git",
                 "url": "https://github.com/egulias/EmailValidator.git",
-                "reference": "f46887bc48db66c7f38f668eb7d6ae54583617ff"
+                "reference": "563d0cdde5d862235ffe24a158497f4d490191b5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/f46887bc48db66c7f38f668eb7d6ae54583617ff",
-                "reference": "f46887bc48db66c7f38f668eb7d6ae54583617ff",
+                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/563d0cdde5d862235ffe24a158497f4d490191b5",
+                "reference": "563d0cdde5d862235ffe24a158497f4d490191b5",
                 "shasum": ""
             },
             "require": {
@@ -420,7 +420,7 @@
                 "validation",
                 "validator"
             ],
-            "time": "2020-09-06T13:44:32+00:00"
+            "time": "2020-09-19T14:37:56+00:00"
         },
         {
             "name": "fideloper/proxy",
@@ -1491,23 +1491,23 @@
         },
         {
             "name": "namelivia/laravel-travelperk",
-            "version": "0.0.29",
+            "version": "0.0.31",
             "source": {
                 "type": "git",
                 "url": "https://github.com/namelivia/laravel-travelperk.git",
-                "reference": "43a783fd89a018eba20395eccdef164c17d8a8b1"
+                "reference": "7554c39abda1d156a7a8db29c76597010ba96412"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/namelivia/laravel-travelperk/zipball/43a783fd89a018eba20395eccdef164c17d8a8b1",
-                "reference": "43a783fd89a018eba20395eccdef164c17d8a8b1",
+                "url": "https://api.github.com/repos/namelivia/laravel-travelperk/zipball/7554c39abda1d156a7a8db29c76597010ba96412",
+                "reference": "7554c39abda1d156a7a8db29c76597010ba96412",
                 "shasum": ""
             },
             "require": {
                 "graham-campbell/manager": "3.*|4.*",
                 "illuminate/contracts": "5.5.*|5.6.*|5.7.*|5.8.*|6.*|7.*|8.*",
                 "illuminate/support": "5.5.*|5.6.*|5.7.*|5.8.*|6.*|7.*|8.*",
-                "namelivia/travelperk-http-php": "^0.0.30",
+                "namelivia/travelperk-http-php": "^0.0.32",
                 "php": "^7.3"
             },
             "require-dev": {
@@ -1548,20 +1548,20 @@
                 "laravel",
                 "travelperk"
             ],
-            "time": "2020-09-19T11:48:43+00:00"
+            "time": "2020-09-21T17:33:37+00:00"
         },
         {
             "name": "namelivia/travelperk-http-php",
-            "version": "0.0.30",
+            "version": "0.0.32",
             "source": {
                 "type": "git",
                 "url": "https://github.com/namelivia/travelperk-http-php.git",
-                "reference": "87bcc1b6c3df9995bb116a5f5466e419802063da"
+                "reference": "2c6ceacbeced3700fbb872ea6d82a8e6218f2bae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/namelivia/travelperk-http-php/zipball/87bcc1b6c3df9995bb116a5f5466e419802063da",
-                "reference": "87bcc1b6c3df9995bb116a5f5466e419802063da",
+                "url": "https://api.github.com/repos/namelivia/travelperk-http-php/zipball/2c6ceacbeced3700fbb872ea6d82a8e6218f2bae",
+                "reference": "2c6ceacbeced3700fbb872ea6d82a8e6218f2bae",
                 "shasum": ""
             },
             "require": {
@@ -1596,7 +1596,7 @@
                 "sdk",
                 "travelperk"
             ],
-            "time": "2020-09-19T11:43:30+00:00"
+            "time": "2020-09-21T17:28:40+00:00"
         },
         {
             "name": "nesbot/carbon",
@@ -1689,16 +1689,16 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v4.9.1",
+            "version": "v4.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "88e519766fc58bd46b8265561fb79b54e2e00b28"
+                "reference": "1c13d05035deff45f1230ca68bd7d74d621762d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/88e519766fc58bd46b8265561fb79b54e2e00b28",
-                "reference": "88e519766fc58bd46b8265561fb79b54e2e00b28",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/1c13d05035deff45f1230ca68bd7d74d621762d9",
+                "reference": "1c13d05035deff45f1230ca68bd7d74d621762d9",
                 "shasum": ""
             },
             "require": {
@@ -1737,7 +1737,7 @@
                 "parser",
                 "php"
             ],
-            "time": "2020-08-30T16:15:20+00:00"
+            "time": "2020-09-19T14:52:48+00:00"
         },
         {
             "name": "opis/closure",
