@@ -28,18 +28,12 @@ User {{ $data->id }}
   			<dd class="col-sm-4">{{$data->externalId}}</dd>
   			<dt class="col-sm-2">Id</dt>
   			<dd class="col-sm-4">{{$data->id}}</dd>
-  			<dt class="col-sm-2">Groups</dt>
-  			<dd class="col-sm-4">{{implode($data->groups)}}</dd>
   			<dt class="col-sm-2">Active</dt>
   			<dd class="col-sm-4">{{$data->active ? 'Yes' : 'No'}}</dd>
   			<dt class="col-sm-2">User Name</dt>
   			<dd class="col-sm-4">{{$data->userName}}</dd>
   			<dt class="col-sm-2">Phone numbers</dt>
-            <dd class="col-sm-4">{{implode(
-                array_map(function ($a) {
-                    return $a->value . ' (' . $a->type . ')';
-                }, $data->phoneNumbers)
-            )}}</dd>
+            <dd class="col-sm-4">{{isset($data->phoneNumbers[0]) ? $data->phoneNumbers[0]->value : ''}}</dd>
   			<dt class="col-sm-2">Resource</dt>
   			<dd class="col-sm-4">{{$data->meta->resourceType}}</dd>
   			<dt class="col-sm-2">Created</dt>

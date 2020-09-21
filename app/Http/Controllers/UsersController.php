@@ -8,6 +8,10 @@ use Namelivia\TravelPerk\SCIM\UsersInputParams;
 use Namelivia\TravelPerk\SCIM\CreateUserInputParams;
 use Namelivia\TravelPerk\SCIM\ReplaceUserInputParams;
 use Namelivia\TravelPerk\SCIM\NameInputParams;
+use Namelivia\TravelPerk\SCIM\Language;
+use Namelivia\TravelPerk\SCIM\Gender;
+use Namelivia\TravelPerk\SCIM\EmergencyContact;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class UsersController extends Controller
@@ -59,7 +63,14 @@ class UsersController extends Controller
      */
     public function create()
     {
-        return view('create-user');
+		return view('create-user', [
+			'languages' => [
+				Language::SPANISH,
+				Language::ENGLISH,
+				Language::DEUTSCH,
+				Language::FRENCH,
+			]
+		]);
     }
 
     /**
@@ -71,7 +82,17 @@ class UsersController extends Controller
     {
         $user = TravelPerk::scim()->users()->get($id);
         return view('modify-user', [
-            'data' => $user
+            'data' => $user,
+			'languages' => [
+				Language::SPANISH,
+				Language::ENGLISH,
+				Language::DEUTSCH,
+				Language::FRENCH,
+			],
+			'genders' => [
+				Gender::MALE,
+				Gender::FEMALE,
+			]
         ]);
     }
 
@@ -94,11 +115,54 @@ class UsersController extends Controller
 		if (isset($honorificPrefix)) {
 			$name->setHonorificPrefix($honorificPrefix);
 		}
-        $user = TravelPerk::scim()->users()->create(new CreateUserInputParams(
+
+		$params = new CreateUserInputParams(
             $request->input('userName'),
 			true, #Always active
 			$name
-        ));
+		);
+
+        $language = $request->input("language");
+		if (isset($language)) {
+			$params->setLanguage(new Language($language));
+		}
+
+        $locale = $request->input("locale");
+		if (isset($locale)) {
+			$params->setLocale($locale);
+		}
+
+        $title = $request->input("title");
+		if (isset($title)) {
+			$params->setTitle($title);
+		}
+
+        $phoneNumber = $request->input("phoneNumber");
+		if (isset($phoneNumber)) {
+			$params->setPhoneNumber($phoneNumber);
+		}
+
+        $externalId = $request->input("externalId");
+		if (isset($externalId)) {
+			$params->setExternalId($externalId);
+		}
+
+        $gender = $request->input("gender");
+		if (isset($gender)) {
+			$params->setGender(new Gender($gender));
+		}
+
+        $dateOfBirth = $request->input("dateOfBirth");
+		if (isset($dateOfBirth)) {
+			$params->setDateOfBirth(Carbon::parse($dateOfBirth));
+		}
+
+        $travelPolicy = $request->input("travelPolicy");
+		if (isset($travelPolicy)) {
+			$params->setTravelPolicy($travelPolicy);
+		}
+
+        $user = TravelPerk::scim()->users()->create($params);
 		#TODO: json decode should be done on the lib
         return view('user', [
             'data' => json_decode($user),
@@ -141,13 +205,84 @@ class UsersController extends Controller
 		if (isset($honorificPrefix)) {
 			$name->setHonorificPrefix($honorificPrefix);
 		}
-		$user = TravelPerk::scim()->users()->replace($id, new ReplaceUserInputParams(
+
+		$params = new ReplaceUserInputParams(
             $request->input('userName'),
 			true, #Always active
 			$name
-		));
+		);
+
+        $language = $request->input("language");
+		if (isset($language)) {
+			$params->setLanguage(new Language($language));
+		}
+
+        $phoneNumber = $request->input("phoneNumber");
+		if (isset($phoneNumber)) {
+			$params->setPhoneNumber($phoneNumber);
+		}
+
+        $locale = $request->input("locale");
+		if (isset($locale)) {
+			$params->setLocale($locale);
+		}
+
+        $title = $request->input("title");
+		if (isset($title)) {
+			$params->setTitle($title);
+		}
+
+        $externalId = $request->input("externalId");
+		if (isset($externalId)) {
+			$params->setExternalId($externalId);
+		}
+
+        $gender = $request->input("gender");
+		if (isset($gender)) {
+			$params->setGender(new Gender($gender));
+		}
+
+        $dateOfBirth = $request->input("dateOfBirth");
+		if (isset($dateOfBirth)) {
+			$params->setDateOfBirth(Carbon::parse($dateOfBirth));
+		}
+
+        $travelPolicy = $request->input("travelPolicy");
+		if (isset($travelPolicy)) {
+			$params->setTravelPolicy($travelPolicy);
+		}
+
+        $costCenter = $request->input("costCenter");
+		if (isset($costCenter)) {
+			$params->setCostCenter($costCenter);
+		}
+
+        $manager = $request->input("manager");
+		if (isset($manager)) {
+			$params->setManager($manager);
+		}
+
+        $emergencyContactName = $request->input("emergencyContactName");
+        $emergencyContactPhone = $request->input("emergencyContactPhone");
+		if (isset($emergencyContactName) && isset($emergencyContactPhone)) {
+			$params->setEmergencyContact(
+				new EmergencyContact($emergencyContactName, $emergencyContactPhone)
+			);
+		}
+
+		$user = TravelPerk::scim()->users()->replace($id, $params);
         return view('modify-user', [
-            'data' => $user
+            'data' => $user,
+			'languages' => [
+				Language::SPANISH,
+				Language::ENGLISH,
+				Language::DEUTSCH,
+				Language::FRENCH,
+			],
+			'genders' => [
+				Gender::MALE,
+				Gender::FEMALE,
+			]
         ]);
     }
 }
