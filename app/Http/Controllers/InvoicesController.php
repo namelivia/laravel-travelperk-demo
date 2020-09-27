@@ -4,9 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Namelivia\TravelPerk\Laravel\Facades\TravelPerk;
-use Namelivia\TravelPerk\Expenses\InvoicesInputParams;
-use Namelivia\TravelPerk\Expenses\InvoiceLinesInputParams;
-use Namelivia\TravelPerk\Pagination\Pagination;
 use Illuminate\Http\Request;
 
 class InvoicesController extends Controller
@@ -18,25 +15,24 @@ class InvoicesController extends Controller
      */
     public function all(Request $request)
     {
-        $params = new InvoicesInputParams();
+        $query = TravelPerk::expenses()->invoices()->query();
 
         // Statically fixing the limit to 50 by now
         $limit = 50;
-		$params->setLimit($limit);
+		$query->setLimit($limit);
 
         $accountNumber = $request->input("account_number");
 		if (isset($accountNumber)) {
-			$params->setTravelperkBankAccountNumber($accountNumber);
+			$query->setTravelperkBankAccountNumber($accountNumber);
         }
 
         $page = $request->input("page");
 		if (isset($page)) {
-			$params->setOffset($page * $limit);
+			$query->setOffset($page * $limit);
         }
-        $response = TravelPerk::expenses()->invoices()->all($params);
 
         return view('invoices', [
-            'response' => $response,
+            'response' => $query->get(),
             'account_number' => $accountNumber,
         ]);
     }
@@ -59,13 +55,18 @@ class InvoicesController extends Controller
      */
     public function profiles(Request $request)
     {
+        $query = TravelPerk::expenses()->invoiceProfiles()->query();
+
         // Statically fixing the limit to 15 by now
         $limit = 15;
+		$query->setLimit($limit);
+
         $page = $request->input("page");
-        $offset = $page ? $page * $limit : 0;
-        $params = new Pagination($offset, $limit);
+		if (isset($page)) {
+			$query->setOffset($page * $limit);
+        }
         return view('invoice-profiles', [
-            'response' => TravelPerk::expenses()->invoiceProfiles()->all($params),
+            'response' => $query->get(),
         ]);
     }
 
@@ -76,19 +77,19 @@ class InvoicesController extends Controller
      */
     public function lines(Request $request)
     {
-        $params = new InvoiceLinesInputParams();
+        $query = TravelPerk::expenses()->invoices()->linesQuery();
 
         // Statically fixing the limit to 50 by now
         $limit = 50;
-		$params->setLimit($limit);
+		$query->setLimit($limit);
 
         $page = $request->input("page");
 		if (isset($page)) {
-			$params->setOffset($page * $limit);
+			$query->setOffset($page * $limit);
 		}
 
         return view('invoice-lines', [
-            'response' => TravelPerk::expenses()->invoices()->lines($params)
+            'response' => $query->get()
         ]);
     }
 }

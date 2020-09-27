@@ -163,9 +163,8 @@ class UsersController extends Controller
 		}
 
         $user = TravelPerk::scim()->users()->create($params);
-		#TODO: json decode should be done on the lib
         return view('user', [
-            'data' => json_decode($user),
+            'data' => $user,
         ]);
     }
 
