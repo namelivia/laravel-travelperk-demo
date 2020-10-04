@@ -3,6 +3,9 @@
 namespace App\Exceptions;
 
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Namelivia\TravelPerk\OAuth\MissingCodeException;
+use Namelivia\TravelPerk\Laravel\Facades\TravelPerk;
+use Illuminate\Support\Facades\Redirect;
 use Throwable;
 
 class Handler extends ExceptionHandler
@@ -50,6 +53,9 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Throwable $exception)
     {
+        if (is_a($exception, MissingCodeException::class)) {
+            return Redirect::to(TravelPerk::getAuthUri());
+        }
         return parent::render($request, $exception);
     }
 }
