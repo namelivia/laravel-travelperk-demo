@@ -1553,12 +1553,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/namelivia/laravel-travelperk.git",
-                "reference": "16bbf48f4df59fa4c1fa7ace66d15c4950d57d0b"
+                "reference": "639ecde8fab51f28c2073d9e9b7007cef7d1cdc2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/namelivia/laravel-travelperk/zipball/16bbf48f4df59fa4c1fa7ace66d15c4950d57d0b",
-                "reference": "16bbf48f4df59fa4c1fa7ace66d15c4950d57d0b",
+                "url": "https://api.github.com/repos/namelivia/laravel-travelperk/zipball/639ecde8fab51f28c2073d9e9b7007cef7d1cdc2",
+                "reference": "639ecde8fab51f28c2073d9e9b7007cef7d1cdc2",
                 "shasum": ""
             },
             "require": {
@@ -1607,7 +1607,7 @@
                 "laravel",
                 "travelperk"
             ],
-            "time": "2020-10-04T10:20:06+00:00"
+            "time": "2020-10-04T17:19:39+00:00"
         },
         {
             "name": "namelivia/travelperk-http-php",
@@ -1615,12 +1615,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/namelivia/travelperk-http-php.git",
-                "reference": "2ad5b879b4f6cbb47912c818ffc78808b5a84bad"
+                "reference": "e78b940d3a017acf3a2b3a1dd7e21dc786c2118d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/namelivia/travelperk-http-php/zipball/2ad5b879b4f6cbb47912c818ffc78808b5a84bad",
-                "reference": "2ad5b879b4f6cbb47912c818ffc78808b5a84bad",
+                "url": "https://api.github.com/repos/namelivia/travelperk-http-php/zipball/e78b940d3a017acf3a2b3a1dd7e21dc786c2118d",
+                "reference": "e78b940d3a017acf3a2b3a1dd7e21dc786c2118d",
                 "shasum": ""
             },
             "require": {
@@ -1656,7 +1656,7 @@
                 "sdk",
                 "travelperk"
             ],
-            "time": "2020-09-29T19:23:30+00:00"
+            "time": "2020-10-04T18:30:05+00:00"
         },
         {
             "name": "nesbot/carbon",

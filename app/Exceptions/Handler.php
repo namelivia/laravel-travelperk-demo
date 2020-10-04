@@ -5,6 +5,7 @@ namespace App\Exceptions;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Namelivia\TravelPerk\OAuth\MissingCodeException;
 use Namelivia\TravelPerk\Laravel\Facades\TravelPerk;
+use kamermans\OAuth2\Exception\AccessTokenRequestException;
 use Illuminate\Support\Facades\Redirect;
 use Throwable;
 
@@ -55,6 +56,10 @@ class Handler extends ExceptionHandler
     {
         if (is_a($exception, MissingCodeException::class)) {
             return Redirect::to(TravelPerk::getAuthUri());
+        }
+        if (is_a($exception, AccessTokenRequestException::class)) {
+            //TODO: This is more informative than the one returned by the oauth library.
+            return parent::render($request, $exception->getPrevious());
         }
         return parent::render($request, $exception);
     }

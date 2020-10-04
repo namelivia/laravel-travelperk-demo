@@ -34,3 +34,4 @@ Route::post('/users/create', 'UsersController@save');
 Route::get('/users/{id}/modify', 'UsersController@modify')->name('modify-user');
 Route::post('/users/{id}/modify', 'UsersController@update');
 Route::delete('/users/{id}', 'UsersController@delete')->name('delete-user');
+Route::get('/oauth_callback', 'OAuthController@callback')->name('oauth-callback');
