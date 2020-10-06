@@ -15,10 +15,6 @@ class OAuthController extends Controller
     {
         //TODO: Verify the state
         TravelPerk::setAuthorizationCode($request->input("code"));
-        $query = TravelPerk::expenses()->invoices()->query();
-        return view('invoices', [
-            'response' => $query->get(),
-        ]);
-        return redirect('/');
+        return redirect($request->input("state"));
     }
 }
