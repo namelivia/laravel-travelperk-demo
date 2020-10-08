@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b709ad94d905f70d59cf1c34e449e6c8",
+    "content-hash": "d3a2fab0d25bb02b85ed18e52e46a5ba",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -940,16 +940,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v8.8.0",
+            "version": "v8.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "0bdd5c6f12cb7cb6644e484169656245af417735"
+                "reference": "8a6bf870bcfa1597e514a9c7ee6df44db98abb54"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/0bdd5c6f12cb7cb6644e484169656245af417735",
-                "reference": "0bdd5c6f12cb7cb6644e484169656245af417735",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/8a6bf870bcfa1597e514a9c7ee6df44db98abb54",
+                "reference": "8a6bf870bcfa1597e514a9c7ee6df44db98abb54",
                 "shasum": ""
             },
             "require": {
@@ -1099,7 +1099,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2020-10-02T14:33:08+00:00"
+            "time": "2020-10-06T14:22:36+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -1549,16 +1549,16 @@
         },
         {
             "name": "namelivia/laravel-travelperk",
-            "version": "dev-include_oauth_2",
+            "version": "0.0.34",
             "source": {
                 "type": "git",
                 "url": "https://github.com/namelivia/laravel-travelperk.git",
-                "reference": "639ecde8fab51f28c2073d9e9b7007cef7d1cdc2"
+                "reference": "0c809b26866884480c713ba88815f79caca57079"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/namelivia/laravel-travelperk/zipball/639ecde8fab51f28c2073d9e9b7007cef7d1cdc2",
-                "reference": "639ecde8fab51f28c2073d9e9b7007cef7d1cdc2",
+                "url": "https://api.github.com/repos/namelivia/laravel-travelperk/zipball/0c809b26866884480c713ba88815f79caca57079",
+                "reference": "0c809b26866884480c713ba88815f79caca57079",
                 "shasum": ""
             },
             "require": {
@@ -1566,7 +1566,7 @@
                 "illuminate/contracts": "5.5.*|5.6.*|5.7.*|5.8.*|6.*|7.*|8.*",
                 "illuminate/support": "5.5.*|5.6.*|5.7.*|5.8.*|6.*|7.*|8.*",
                 "kamermans/guzzle-oauth2-subscriber": "^1.0",
-                "namelivia/travelperk-http-php": "dev-include_oauth_2",
+                "namelivia/travelperk-http-php": "^0.0.37",
                 "php": "^7.3"
             },
             "require-dev": {
@@ -1607,20 +1607,20 @@
                 "laravel",
                 "travelperk"
             ],
-            "time": "2020-10-04T17:19:39+00:00"
+            "time": "2020-10-08T12:16:46+00:00"
         },
         {
             "name": "namelivia/travelperk-http-php",
-            "version": "dev-include_oauth_2",
+            "version": "0.0.37",
             "source": {
                 "type": "git",
                 "url": "https://github.com/namelivia/travelperk-http-php.git",
-                "reference": "d42178edab71a40bd7990633651498377f2c8304"
+                "reference": "1274046abdceff3d8e05ae2d1eef1625fd62e292"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/namelivia/travelperk-http-php/zipball/d42178edab71a40bd7990633651498377f2c8304",
-                "reference": "d42178edab71a40bd7990633651498377f2c8304",
+                "url": "https://api.github.com/repos/namelivia/travelperk-http-php/zipball/1274046abdceff3d8e05ae2d1eef1625fd62e292",
+                "reference": "1274046abdceff3d8e05ae2d1eef1625fd62e292",
                 "shasum": ""
             },
             "require": {
@@ -1656,7 +1656,7 @@
                 "sdk",
                 "travelperk"
             ],
-            "time": "2020-10-06T09:33:23+00:00"
+            "time": "2020-10-08T11:50:54+00:00"
         },
         {
             "name": "nesbot/carbon",
@@ -2595,12 +2595,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "04c3a31fe8ea94b42c9e2d1acc93d19782133b00"
+                "reference": "ae789a8a2ad189ce7e8216942cdb9b77319f5eb8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/04c3a31fe8ea94b42c9e2d1acc93d19782133b00",
-                "reference": "04c3a31fe8ea94b42c9e2d1acc93d19782133b00",
+                "url": "https://api.github.com/repos/symfony/console/zipball/ae789a8a2ad189ce7e8216942cdb9b77319f5eb8",
+                "reference": "ae789a8a2ad189ce7e8216942cdb9b77319f5eb8",
                 "shasum": ""
             },
             "require": {
@@ -7400,9 +7400,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "namelivia/laravel-travelperk": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
