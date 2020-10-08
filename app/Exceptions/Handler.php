@@ -59,7 +59,7 @@ class Handler extends ExceptionHandler
             return Redirect::to(TravelPerk::getAuthUri(Request::path()));
         }
         if (is_a($exception, AccessTokenRequestException::class)) {
-            //TODO: This is more informative than the one returned by the oauth library.
+            //This is more informative than the one returned by the oauth library.
             return parent::render($request, $exception->getPrevious());
         }
         return parent::render($request, $exception);
