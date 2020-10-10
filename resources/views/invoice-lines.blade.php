@@ -5,7 +5,7 @@ Invoices Profiles
 @endsection
 
 @section('content')
-@section('content')
+@include('layouts.filtering', $filteringFields)
 <table class="table table-sm table-striped table-bordered">
     <thead class="thead-dark">
         <tr>

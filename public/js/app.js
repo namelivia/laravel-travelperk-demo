@@ -37276,6 +37276,15 @@ module.exports = function(module) {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+window.setFilterType = function () {
+  document.getElementById("filterValue").disabled = false;
+};
+
+window.setFilter = function (filterValue) {
+  var value = filterValue.value;
+  document.getElementById(document.getElementById("filterType").value).value = value;
+};
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
