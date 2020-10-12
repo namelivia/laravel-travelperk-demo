@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1b1d9cde98929918365fed0a6a1b4b90",
+    "content-hash": "bfff1c632a2870aa24ff010a54c21d35",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1549,16 +1549,16 @@
         },
         {
             "name": "namelivia/laravel-travelperk",
-            "version": "0.0.40",
+            "version": "0.0.42",
             "source": {
                 "type": "git",
                 "url": "https://github.com/namelivia/laravel-travelperk.git",
-                "reference": "a75bd614183c2397ccb2c365c4d4ef2121cc212f"
+                "reference": "23cc39ebcc75bbdc6cd8ec399b7b53dbb3f829c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/namelivia/laravel-travelperk/zipball/a75bd614183c2397ccb2c365c4d4ef2121cc212f",
-                "reference": "a75bd614183c2397ccb2c365c4d4ef2121cc212f",
+                "url": "https://api.github.com/repos/namelivia/laravel-travelperk/zipball/23cc39ebcc75bbdc6cd8ec399b7b53dbb3f829c6",
+                "reference": "23cc39ebcc75bbdc6cd8ec399b7b53dbb3f829c6",
                 "shasum": ""
             },
             "require": {
@@ -1607,7 +1607,7 @@
                 "laravel",
                 "travelperk"
             ],
-            "time": "2020-10-12T11:27:22+00:00"
+            "time": "2020-10-12T12:42:55+00:00"
         },
         {
             "name": "namelivia/travelperk-http-php",
