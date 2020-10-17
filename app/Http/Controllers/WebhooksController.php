@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Namelivia\TravelPerk\Laravel\Facades\TravelPerk;
-use Namelivia\TravelPerk\Webhooks\CreateWebhookInputParams;
-use Namelivia\TravelPerk\Webhooks\UpdateWebhookInputParams;
 use Illuminate\Http\Request;
 
 class WebhooksController extends Controller
@@ -69,12 +67,12 @@ class WebhooksController extends Controller
      */
     public function save(Request $request)
     {
-        $webhook = TravelPerk::webhooks()->webhooks()->create(new CreateWebhookInputParams(
+        $webhook = TravelPerk::webhooks()->webhooks()->create(
             $request->input('name'),
             $request->input('url'),
             $request->input('secret'),
             $request->input('events'),
-        ));
+        );
         return view('webhook', [
             'data' => $webhook,
         ]);
@@ -101,39 +99,39 @@ class WebhooksController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $params = new UpdateWebhookInputParams();
+        $webhook = TravelPerk::webhooks()->webhooks()->modify($id);
 
         $name = $request->input("name");
 		if (isset($name)) {
-			$params->setName($name);
+			$webhook->setName($name);
 		}
 
         $secret = $request->input("secret");
 		if (isset($secret)) {
-			$params->setSecret($secret);
+			$webhook->setSecret($secret);
 		}
 
         $url = $request->input("url");
 		if (isset($url)) {
-			$params->setUrl($url);
+			$webhook->setUrl($url);
 		}
 
         $enabled = $request->input("enabled");
 		if (isset($enabled)) {
-			$params->setEnabled(true);
+			$webhook->setEnabled(true);
         } else {
-			$params->setEnabled(false);
+			$webhook->setEnabled(false);
         }
 
         $events = $request->input("events");
 		if (isset($events)) {
-			$params->setEvents($events);
+			$webhook->setEvents($events);
 		}
 
-        $webhook = TravelPerk::webhooks()->webhooks()->update($id, $params);
+        $updatedWebhook = $webhook->save();
 
         return view('modify-webhook', [
-            'data' => $webhook,
+            'data' => $updatedWebhook,
             'events' => TravelPerk::webhooks()->webhooks()->events(),
         ]);
     }

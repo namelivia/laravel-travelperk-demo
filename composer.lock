@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a0874766254e2dc97f7bb62a8fac4fbd",
+    "content-hash": "842391b80385ebc5b41255acf8d9cd21",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1549,16 +1549,16 @@
         },
         {
             "name": "namelivia/laravel-travelperk",
-            "version": "0.0.43",
+            "version": "0.0.46",
             "source": {
                 "type": "git",
                 "url": "https://github.com/namelivia/laravel-travelperk.git",
-                "reference": "01434bbee25db5eeae55bdf951df5f328c857fe4"
+                "reference": "a61059d77b41f1582ce3c0054f353cab91d25bcf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/namelivia/laravel-travelperk/zipball/01434bbee25db5eeae55bdf951df5f328c857fe4",
-                "reference": "01434bbee25db5eeae55bdf951df5f328c857fe4",
+                "url": "https://api.github.com/repos/namelivia/laravel-travelperk/zipball/a61059d77b41f1582ce3c0054f353cab91d25bcf",
+                "reference": "a61059d77b41f1582ce3c0054f353cab91d25bcf",
                 "shasum": ""
             },
             "require": {
@@ -1566,7 +1566,7 @@
                 "illuminate/contracts": "5.5.*|5.6.*|5.7.*|5.8.*|6.*|7.*|8.*",
                 "illuminate/support": "5.5.*|5.6.*|5.7.*|5.8.*|6.*|7.*|8.*",
                 "kamermans/guzzle-oauth2-subscriber": "^1.0",
-                "namelivia/travelperk-http-php": "^0.0.43",
+                "namelivia/travelperk-http-php": "^0.0.44",
                 "php": "^7.3"
             },
             "require-dev": {
@@ -1607,20 +1607,20 @@
                 "laravel",
                 "travelperk"
             ],
-            "time": "2020-10-14T09:30:46+00:00"
+            "time": "2020-10-17T17:52:47+00:00"
         },
         {
             "name": "namelivia/travelperk-http-php",
-            "version": "0.0.43",
+            "version": "0.0.44",
             "source": {
                 "type": "git",
                 "url": "https://github.com/namelivia/travelperk-http-php.git",
-                "reference": "8f1e2b40448853b46163f5656fce4f24a7407fe6"
+                "reference": "d7655fcbfa314ed72c8b8d65e43e36ce25da2c8a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/namelivia/travelperk-http-php/zipball/8f1e2b40448853b46163f5656fce4f24a7407fe6",
-                "reference": "8f1e2b40448853b46163f5656fce4f24a7407fe6",
+                "url": "https://api.github.com/repos/namelivia/travelperk-http-php/zipball/d7655fcbfa314ed72c8b8d65e43e36ce25da2c8a",
+                "reference": "d7655fcbfa314ed72c8b8d65e43e36ce25da2c8a",
                 "shasum": ""
             },
             "require": {
@@ -1656,7 +1656,7 @@
                 "sdk",
                 "travelperk"
             ],
-            "time": "2020-10-14T10:38:11+00:00"
+            "time": "2020-10-17T17:44:20+00:00"
         },
         {
             "name": "nesbot/carbon",
@@ -1862,20 +1862,20 @@
         },
         {
             "name": "paragonie/random_compat",
-            "version": "v9.99.99",
+            "version": "v9.99.100",
             "source": {
                 "type": "git",
                 "url": "https://github.com/paragonie/random_compat.git",
-                "reference": "84b4dfb120c6f9b4ff7b3685f9b8f1aa365a0c95"
+                "reference": "996434e5492cb4c3edcb9168db6fbb1359ef965a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/84b4dfb120c6f9b4ff7b3685f9b8f1aa365a0c95",
-                "reference": "84b4dfb120c6f9b4ff7b3685f9b8f1aa365a0c95",
+                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/996434e5492cb4c3edcb9168db6fbb1359ef965a",
+                "reference": "996434e5492cb4c3edcb9168db6fbb1359ef965a",
                 "shasum": ""
             },
             "require": {
-                "php": "^7"
+                "php": ">= 7"
             },
             "require-dev": {
                 "phpunit/phpunit": "4.*|5.*",
@@ -1903,7 +1903,7 @@
                 "pseudorandom",
                 "random"
             ],
-            "time": "2018-07-02T15:55:56+00:00"
+            "time": "2020-10-15T08:29:30+00:00"
         },
         {
             "name": "phpoption/phpoption",
@@ -3112,16 +3112,16 @@
         },
         {
             "name": "symfony/http-client-contracts",
-            "version": "v2.2.0",
+            "version": "v2.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-client-contracts.git",
-                "reference": "3a5d0fe7908daaa23e3dbf4cee3ba4bfbb19fdd3"
+                "reference": "41db680a15018f9c1d4b23516059633ce280ca33"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-client-contracts/zipball/3a5d0fe7908daaa23e3dbf4cee3ba4bfbb19fdd3",
-                "reference": "3a5d0fe7908daaa23e3dbf4cee3ba4bfbb19fdd3",
+                "url": "https://api.github.com/repos/symfony/http-client-contracts/zipball/41db680a15018f9c1d4b23516059633ce280ca33",
+                "reference": "41db680a15018f9c1d4b23516059633ce280ca33",
                 "shasum": ""
             },
             "require": {
@@ -3132,8 +3132,9 @@
             },
             "type": "library",
             "extra": {
+                "branch-version": "2.3",
                 "branch-alias": {
-                    "dev-master": "2.2-dev"
+                    "dev-main": "2.3-dev"
                 },
                 "thanks": {
                     "name": "symfony/contracts",
@@ -3183,7 +3184,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-09-07T11:33:47+00:00"
+            "time": "2020-10-14T17:08:19+00:00"
         },
         {
             "name": "symfony/http-foundation",
@@ -5207,25 +5208,25 @@
         },
         {
             "name": "facade/ignition-contracts",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/facade/ignition-contracts.git",
-                "reference": "aeab1ce8b68b188a43e81758e750151ad7da796b"
+                "reference": "3c921a1cdba35b68a7f0ccffc6dffc1995b18267"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/facade/ignition-contracts/zipball/aeab1ce8b68b188a43e81758e750151ad7da796b",
-                "reference": "aeab1ce8b68b188a43e81758e750151ad7da796b",
+                "url": "https://api.github.com/repos/facade/ignition-contracts/zipball/3c921a1cdba35b68a7f0ccffc6dffc1995b18267",
+                "reference": "3c921a1cdba35b68a7f0ccffc6dffc1995b18267",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.1"
+                "php": "^7.3|^8.0"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "^2.14",
-                "phpunit/phpunit": "^7.5|^8.0",
-                "vimeo/psalm": "^3.12"
+                "friendsofphp/php-cs-fixer": "^v2.15.8",
+                "phpunit/phpunit": "^9.3.11",
+                "vimeo/psalm": "^3.17.1"
             },
             "type": "library",
             "autoload": {
@@ -5252,29 +5253,29 @@
                 "flare",
                 "ignition"
             ],
-            "time": "2020-07-14T10:10:28+00:00"
+            "time": "2020-10-16T08:27:54+00:00"
         },
         {
             "name": "filp/whoops",
-            "version": "2.7.3",
+            "version": "2.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filp/whoops.git",
-                "reference": "5d5fe9bb3d656b514d455645b3addc5f7ba7714d"
+                "reference": "fa50d9db1c0c2fae99cf988d27023effda5524a3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filp/whoops/zipball/5d5fe9bb3d656b514d455645b3addc5f7ba7714d",
-                "reference": "5d5fe9bb3d656b514d455645b3addc5f7ba7714d",
+                "url": "https://api.github.com/repos/filp/whoops/zipball/fa50d9db1c0c2fae99cf988d27023effda5524a3",
+                "reference": "fa50d9db1c0c2fae99cf988d27023effda5524a3",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.5.9 || ^7.0",
+                "php": "^5.5.9 || ^7.0 || ^8.0",
                 "psr/log": "^1.0.1"
             },
             "require-dev": {
                 "mockery/mockery": "^0.9 || ^1.0",
-                "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.0",
+                "phpunit/phpunit": "^4.8.36 || ^5.7.27 || ^6.5.14 || ^7.5.20 || ^8.5.8 || ^9.3.3",
                 "symfony/var-dumper": "^2.6 || ^3.0 || ^4.0 || ^5.0"
             },
             "suggest": {
@@ -5284,7 +5285,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.6-dev"
+                    "dev-master": "2.7-dev"
                 }
             },
             "autoload": {
@@ -5313,7 +5314,7 @@
                 "throwable",
                 "whoops"
             ],
-            "time": "2020-06-14T09:00:00+00:00"
+            "time": "2020-10-17T09:00:00+00:00"
         },
         {
             "name": "fzaninotto/faker",
@@ -6329,16 +6330,16 @@
         },
         {
             "name": "scrivo/highlight.php",
-            "version": "v9.18.1.2",
+            "version": "v9.18.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/scrivo/highlight.php.git",
-                "reference": "efb6e445494a9458aa59b0af5edfa4bdcc6809d9"
+                "reference": "6a1699707b099081f20a488ac1f92d682181018c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/scrivo/highlight.php/zipball/efb6e445494a9458aa59b0af5edfa4bdcc6809d9",
-                "reference": "efb6e445494a9458aa59b0af5edfa4bdcc6809d9",
+                "url": "https://api.github.com/repos/scrivo/highlight.php/zipball/6a1699707b099081f20a488ac1f92d682181018c",
+                "reference": "6a1699707b099081f20a488ac1f92d682181018c",
                 "shasum": ""
             },
             "require": {
@@ -6400,7 +6401,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-08-27T03:24:44+00:00"
+            "time": "2020-10-16T07:43:22+00:00"
         },
         {
             "name": "sebastian/cli-parser",
