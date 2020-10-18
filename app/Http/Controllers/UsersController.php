@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Namelivia\TravelPerk\Laravel\Facades\TravelPerk;
 use Namelivia\TravelPerk\SCIM\UsersInputParams;
-use Namelivia\TravelPerk\SCIM\CreateUserInputParams;
 use Namelivia\TravelPerk\SCIM\ReplaceUserInputParams;
 use Namelivia\TravelPerk\SCIM\NameInputParams;
 use Namelivia\TravelPerk\SCIM\Language;
@@ -69,6 +68,10 @@ class UsersController extends Controller
 				Language::ENGLISH,
 				Language::DEUTSCH,
 				Language::FRENCH,
+			],
+			'genders' => [
+				Gender::MALE,
+				Gender::FEMALE,
 			]
 		]);
     }
@@ -103,68 +106,63 @@ class UsersController extends Controller
      */
     public function save(Request $request)
     {
-		$name = new NameInputParams(
+		$newUser = TravelPerk::scim()->users()->make(
+            $request->input('userName'),
+			true, #Always active
 			$request->input('givenName'),
 			$request->input('familyName')
 		);
         $middleName = $request->input("middleName");
 		if (isset($middleName)) {
-			$name->setMiddleName($middleName);
+			$newUser->setMiddleName($middleName);
 		}
         $honorificPrefix = $request->input("honorificPrefix");
 		if (isset($honorificPrefix)) {
-			$name->setHonorificPrefix($honorificPrefix);
+			$newUser->setHonorificPrefix($honorificPrefix);
 		}
-
-		$params = new CreateUserInputParams(
-            $request->input('userName'),
-			true, #Always active
-			$name
-		);
 
         $language = $request->input("language");
 		if (isset($language)) {
-			$params->setLanguage(new Language($language));
+			$newUser->setLanguage(new Language($language));
 		}
 
         $locale = $request->input("locale");
 		if (isset($locale)) {
-			$params->setLocale($locale);
+			$newUser->setLocale($locale);
 		}
 
         $title = $request->input("title");
 		if (isset($title)) {
-			$params->setTitle($title);
+			$newUser->setTitle($title);
 		}
 
         $phoneNumber = $request->input("phoneNumber");
 		if (isset($phoneNumber)) {
-			$params->setPhoneNumber($phoneNumber);
+			$newUser->setPhoneNumber($phoneNumber);
 		}
 
         $externalId = $request->input("externalId");
 		if (isset($externalId)) {
-			$params->setExternalId($externalId);
+			$newUser->setExternalId($externalId);
 		}
 
         $gender = $request->input("gender");
 		if (isset($gender)) {
-			$params->setGender(new Gender($gender));
+			$newUser->setGender(new Gender($gender));
 		}
 
         $dateOfBirth = $request->input("dateOfBirth");
 		if (isset($dateOfBirth)) {
-			$params->setDateOfBirth(Carbon::parse($dateOfBirth));
+			$newUser->setDateOfBirth(Carbon::parse($dateOfBirth));
 		}
 
         $travelPolicy = $request->input("travelPolicy");
 		if (isset($travelPolicy)) {
-			$params->setTravelPolicy($travelPolicy);
+			$newUser->setTravelPolicy($travelPolicy);
 		}
 
-        $user = TravelPerk::scim()->users()->create($params);
         return view('user', [
-            'data' => $user,
+            'data' => $newUser->save(),
         ]);
     }
 

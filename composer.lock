@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "842391b80385ebc5b41255acf8d9cd21",
+    "content-hash": "fe5623c41c32bca698a66f8b34e0603b",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1221,16 +1221,16 @@
         },
         {
             "name": "league/commonmark",
-            "version": "1.5.5",
+            "version": "1.5.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/commonmark.git",
-                "reference": "45832dfed6007b984c0d40addfac48d403dc6432"
+                "reference": "a56e91e0fa1f6d0049153a9c34f63488f6b7ce61"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/45832dfed6007b984c0d40addfac48d403dc6432",
-                "reference": "45832dfed6007b984c0d40addfac48d403dc6432",
+                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/a56e91e0fa1f6d0049153a9c34f63488f6b7ce61",
+                "reference": "a56e91e0fa1f6d0049153a9c34f63488f6b7ce61",
                 "shasum": ""
             },
             "require": {
@@ -1312,7 +1312,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-09-13T14:44:46+00:00"
+            "time": "2020-10-17T21:33:03+00:00"
         },
         {
             "name": "league/flysystem",
@@ -1549,16 +1549,16 @@
         },
         {
             "name": "namelivia/laravel-travelperk",
-            "version": "0.0.46",
+            "version": "0.0.48",
             "source": {
                 "type": "git",
                 "url": "https://github.com/namelivia/laravel-travelperk.git",
-                "reference": "a61059d77b41f1582ce3c0054f353cab91d25bcf"
+                "reference": "329f5bc3fcfd8f4d8d106d6d19095a0a6ee245cc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/namelivia/laravel-travelperk/zipball/a61059d77b41f1582ce3c0054f353cab91d25bcf",
-                "reference": "a61059d77b41f1582ce3c0054f353cab91d25bcf",
+                "url": "https://api.github.com/repos/namelivia/laravel-travelperk/zipball/329f5bc3fcfd8f4d8d106d6d19095a0a6ee245cc",
+                "reference": "329f5bc3fcfd8f4d8d106d6d19095a0a6ee245cc",
                 "shasum": ""
             },
             "require": {
@@ -1566,7 +1566,7 @@
                 "illuminate/contracts": "5.5.*|5.6.*|5.7.*|5.8.*|6.*|7.*|8.*",
                 "illuminate/support": "5.5.*|5.6.*|5.7.*|5.8.*|6.*|7.*|8.*",
                 "kamermans/guzzle-oauth2-subscriber": "^1.0",
-                "namelivia/travelperk-http-php": "^0.0.44",
+                "namelivia/travelperk-http-php": "^0.0.46",
                 "php": "^7.3"
             },
             "require-dev": {
@@ -1607,20 +1607,20 @@
                 "laravel",
                 "travelperk"
             ],
-            "time": "2020-10-17T17:52:47+00:00"
+            "time": "2020-10-18T10:18:19+00:00"
         },
         {
             "name": "namelivia/travelperk-http-php",
-            "version": "0.0.44",
+            "version": "0.0.46",
             "source": {
                 "type": "git",
                 "url": "https://github.com/namelivia/travelperk-http-php.git",
-                "reference": "d7655fcbfa314ed72c8b8d65e43e36ce25da2c8a"
+                "reference": "abad06dd11931b7b676b1189ef52d4e659329a8d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/namelivia/travelperk-http-php/zipball/d7655fcbfa314ed72c8b8d65e43e36ce25da2c8a",
-                "reference": "d7655fcbfa314ed72c8b8d65e43e36ce25da2c8a",
+                "url": "https://api.github.com/repos/namelivia/travelperk-http-php/zipball/abad06dd11931b7b676b1189ef52d4e659329a8d",
+                "reference": "abad06dd11931b7b676b1189ef52d4e659329a8d",
                 "shasum": ""
             },
             "require": {
@@ -1656,7 +1656,7 @@
                 "sdk",
                 "travelperk"
             ],
-            "time": "2020-10-17T17:44:20+00:00"
+            "time": "2020-10-18T10:13:36+00:00"
         },
         {
             "name": "nesbot/carbon",
