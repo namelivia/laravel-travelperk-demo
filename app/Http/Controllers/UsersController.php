@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Namelivia\TravelPerk\Laravel\Facades\TravelPerk;
-use Namelivia\TravelPerk\SCIM\UsersInputParams;
 use Namelivia\TravelPerk\SCIM\ReplaceUserInputParams;
 use Namelivia\TravelPerk\SCIM\NameInputParams;
 use Namelivia\TravelPerk\SCIM\Language;
@@ -22,18 +21,18 @@ class UsersController extends Controller
      */
     public function all(Request $request)
 	{
-        $params = new UsersInputParams();
+        $query = TravelPerk::scim()->users()->query();
 
         // Statically fixing the limit to 10 by now
         $limit = 10;
-		$params->setCount($limit);
+		$query->setCount($limit);
 
         $page = $request->input("page");
 		if (isset($page)) {
-			$params->setStartIndex(($page * $limit) + 1);
+			$query->setStartIndex(($page * $limit) + 1);
 		}
 
-		$data = TravelPerk::scim()->users()->all($params);
+		$data = $query->get();
 		$data->total = $data->totalResults;
 		$data->limit = $limit;
 		$data->offset = $data->startIndex - 1;
