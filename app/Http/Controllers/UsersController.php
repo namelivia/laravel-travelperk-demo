@@ -4,11 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Namelivia\TravelPerk\Laravel\Facades\TravelPerk;
-use Namelivia\TravelPerk\SCIM\ReplaceUserInputParams;
-use Namelivia\TravelPerk\SCIM\NameInputParams;
 use Namelivia\TravelPerk\SCIM\Language;
 use Namelivia\TravelPerk\SCIM\Gender;
-use Namelivia\TravelPerk\SCIM\EmergencyContact;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 
@@ -259,9 +256,7 @@ class UsersController extends Controller
         $emergencyContactName = $request->input("emergencyContactName");
         $emergencyContactPhone = $request->input("emergencyContactPhone");
 		if (isset($emergencyContactName) && isset($emergencyContactPhone)) {
-			$updatingUser->setEmergencyContact(
-				new EmergencyContact($emergencyContactName, $emergencyContactPhone)
-			);
+			$updatingUser->setEmergencyContact($emergencyContactName, $emergencyContactPhone);
 		}
 
         return view('modify-user', [

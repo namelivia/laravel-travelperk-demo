@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3e314ca058cf58d1c02b05d1b366569a",
+    "content-hash": "63333bff24ef25eba9b730becce1fca7",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1549,16 +1549,16 @@
         },
         {
             "name": "namelivia/laravel-travelperk",
-            "version": "0.0.49",
+            "version": "0.0.51",
             "source": {
                 "type": "git",
                 "url": "https://github.com/namelivia/laravel-travelperk.git",
-                "reference": "a1bf0ca4a327d02f94f889ea05e6966adb941684"
+                "reference": "7124cad106010435d1b55c13025c7df71d0be3fd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/namelivia/laravel-travelperk/zipball/a1bf0ca4a327d02f94f889ea05e6966adb941684",
-                "reference": "a1bf0ca4a327d02f94f889ea05e6966adb941684",
+                "url": "https://api.github.com/repos/namelivia/laravel-travelperk/zipball/7124cad106010435d1b55c13025c7df71d0be3fd",
+                "reference": "7124cad106010435d1b55c13025c7df71d0be3fd",
                 "shasum": ""
             },
             "require": {
@@ -1566,7 +1566,7 @@
                 "illuminate/contracts": "5.5.*|5.6.*|5.7.*|5.8.*|6.*|7.*|8.*",
                 "illuminate/support": "5.5.*|5.6.*|5.7.*|5.8.*|6.*|7.*|8.*",
                 "kamermans/guzzle-oauth2-subscriber": "^1.0",
-                "namelivia/travelperk-http-php": "^0.0.47",
+                "namelivia/travelperk-http-php": "^0.0.50",
                 "php": "^7.3"
             },
             "require-dev": {
@@ -1607,20 +1607,20 @@
                 "laravel",
                 "travelperk"
             ],
-            "time": "2020-10-20T07:42:03+00:00"
+            "time": "2020-10-20T10:23:11+00:00"
         },
         {
             "name": "namelivia/travelperk-http-php",
-            "version": "0.0.47",
+            "version": "0.0.50",
             "source": {
                 "type": "git",
                 "url": "https://github.com/namelivia/travelperk-http-php.git",
-                "reference": "9ea0d52c8d9f011d2a23460bc7c3aae769ca2322"
+                "reference": "4c130d690d256798ea7f440b9512717413fe6adc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/namelivia/travelperk-http-php/zipball/9ea0d52c8d9f011d2a23460bc7c3aae769ca2322",
-                "reference": "9ea0d52c8d9f011d2a23460bc7c3aae769ca2322",
+                "url": "https://api.github.com/repos/namelivia/travelperk-http-php/zipball/4c130d690d256798ea7f440b9512717413fe6adc",
+                "reference": "4c130d690d256798ea7f440b9512717413fe6adc",
                 "shasum": ""
             },
             "require": {
@@ -1656,7 +1656,7 @@
                 "sdk",
                 "travelperk"
             ],
-            "time": "2020-10-20T07:27:05+00:00"
+            "time": "2020-10-20T10:12:22+00:00"
         },
         {
             "name": "nesbot/carbon",
@@ -5257,16 +5257,16 @@
         },
         {
             "name": "filp/whoops",
-            "version": "2.8.0",
+            "version": "2.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filp/whoops.git",
-                "reference": "fa50d9db1c0c2fae99cf988d27023effda5524a3"
+                "reference": "2ec31f3adc54c71a59c5e3c2143d7a0e2f8899f8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filp/whoops/zipball/fa50d9db1c0c2fae99cf988d27023effda5524a3",
-                "reference": "fa50d9db1c0c2fae99cf988d27023effda5524a3",
+                "url": "https://api.github.com/repos/filp/whoops/zipball/2ec31f3adc54c71a59c5e3c2143d7a0e2f8899f8",
+                "reference": "2ec31f3adc54c71a59c5e3c2143d7a0e2f8899f8",
                 "shasum": ""
             },
             "require": {
@@ -5314,7 +5314,7 @@
                 "throwable",
                 "whoops"
             ],
-            "time": "2020-10-17T09:00:00+00:00"
+            "time": "2020-10-20T12:00:00+00:00"
         },
         {
             "name": "fzaninotto/faker",
