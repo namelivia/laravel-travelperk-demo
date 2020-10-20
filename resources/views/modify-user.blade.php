@@ -53,7 +53,7 @@ Update User
             </div>
             <div class="form-group">
                 <label for="phoneNumbern">Phone Number</label>
-                <input id="phoneNumber" value="{{$data->phoneNumbers[0]->value}}" name="phoneNumber" type="text" class="form-control">
+                <input id="phoneNumber" value="{{count($data->phoneNumbers) ? $data->phoneNumbers[0]->value : null}}" name="phoneNumber" type="text" class="form-control">
             </div>
             <div class="form-group">
                 <label for="gender">Gender</label>

@@ -189,86 +189,83 @@ class UsersController extends Controller
      */
     public function update(Request $request, $id)
     {
-		$name = new NameInputParams(
-			$request->input('givenName'),
-			$request->input('familyName')
+		$updatingUser = TravelPerk::scim()->users()->modify(
+			$id,
+            $request->input('userName'),
+			true, #Always active
+        	$request->input("givenName"),
+        	$request->input("familyName")
 		);
+
         $middleName = $request->input("middleName");
 		if (isset($middleName)) {
-			$name->setMiddleName($middleName);
+			$updatingUser->setMiddleName($middleName);
 		}
         $honorificPrefix = $request->input("honorificPrefix");
 		if (isset($honorificPrefix)) {
-			$name->setHonorificPrefix($honorificPrefix);
+			$updatingUser->setHonorificPrefix($honorificPrefix);
 		}
-
-		$params = new ReplaceUserInputParams(
-            $request->input('userName'),
-			true, #Always active
-			$name
-		);
 
         $language = $request->input("language");
 		if (isset($language)) {
-			$params->setLanguage(new Language($language));
+			$updatingUser->setLanguage(new Language($language));
 		}
 
         $phoneNumber = $request->input("phoneNumber");
 		if (isset($phoneNumber)) {
-			$params->setPhoneNumber($phoneNumber);
+			$updatingUser->setPhoneNumber($phoneNumber);
 		}
 
         $locale = $request->input("locale");
 		if (isset($locale)) {
-			$params->setLocale($locale);
+			$updatingUser->setLocale($locale);
 		}
 
         $title = $request->input("title");
 		if (isset($title)) {
-			$params->setTitle($title);
+			$updatingUser->setTitle($title);
 		}
 
         $externalId = $request->input("externalId");
 		if (isset($externalId)) {
-			$params->setExternalId($externalId);
+			$updatingUser->setExternalId($externalId);
 		}
 
         $gender = $request->input("gender");
 		if (isset($gender)) {
-			$params->setGender(new Gender($gender));
+			$updatingUser->setGender(new Gender($gender));
 		}
 
         $dateOfBirth = $request->input("dateOfBirth");
 		if (isset($dateOfBirth)) {
-			$params->setDateOfBirth(Carbon::parse($dateOfBirth));
+			$updatingUser->setDateOfBirth(Carbon::parse($dateOfBirth));
 		}
 
         $travelPolicy = $request->input("travelPolicy");
 		if (isset($travelPolicy)) {
-			$params->setTravelPolicy($travelPolicy);
+			$updatingUser->setTravelPolicy($travelPolicy);
 		}
 
         $costCenter = $request->input("costCenter");
 		if (isset($costCenter)) {
-			$params->setCostCenter($costCenter);
+			$updatingUser->setCostCenter($costCenter);
 		}
 
         $manager = $request->input("manager");
 		if (isset($manager)) {
-			$params->setManager($manager);
+			$updatingUser->setManager($manager);
 		}
 
         $emergencyContactName = $request->input("emergencyContactName");
         $emergencyContactPhone = $request->input("emergencyContactPhone");
 		if (isset($emergencyContactName) && isset($emergencyContactPhone)) {
-			$params->setEmergencyContact(
+			$updatingUser->setEmergencyContact(
 				new EmergencyContact($emergencyContactName, $emergencyContactPhone)
 			);
 		}
 
-		$user = TravelPerk::scim()->users()->replace($id, $params);
         return view('modify-user', [
-            'data' => $user,
+            'data' => $updatingUser->save(),
 			'languages' => [
 				Language::SPANISH,
 				Language::ENGLISH,
