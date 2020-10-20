@@ -36,9 +36,9 @@ class InvoicesController extends Controller
             [
                 'name' => 'Billing period',
                 'param' => 'billing_period',
+                'options' => TravelPerk::expenses()->invoices()->billingPeriods(),
                 'method' => function($query, $value) {
-                    //TODO: Here I should pass a constant
-                    //$query->setBillingPeriod(explode(',' , $value));
+                    $query->setBillingPeriod($value);
                 }
             ],
             [
@@ -60,9 +60,9 @@ class InvoicesController extends Controller
             [
                 'name' => 'Status',
                 'param' => 'status',
+                'options' => TravelPerk::expenses()->invoices()->statuses(),
                 'method' => function($query, $value) {
-                    //TODO: Here I should pass a constant
-                    //$query->setStatus($value);
+                    $query->setStatus($value);
                 }
             ],
             [
