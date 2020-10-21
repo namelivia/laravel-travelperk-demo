@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "635db34b28c0c57c7fa383d91ed66b94",
+    "content-hash": "b9c4c7389f97007a70b387281b1b9607",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -940,16 +940,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v8.11.0",
+            "version": "v8.11.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "243b376c0d80da12bcf7d21ea857c0a609b21f7a"
+                "reference": "8d1f25fb8d124d5a24df9714ed8d481c43f9efe6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/243b376c0d80da12bcf7d21ea857c0a609b21f7a",
-                "reference": "243b376c0d80da12bcf7d21ea857c0a609b21f7a",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/8d1f25fb8d124d5a24df9714ed8d481c43f9efe6",
+                "reference": "8d1f25fb8d124d5a24df9714ed8d481c43f9efe6",
                 "shasum": ""
             },
             "require": {
@@ -1099,7 +1099,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2020-10-20T14:10:54+00:00"
+            "time": "2020-10-20T20:12:53+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -1549,16 +1549,16 @@
         },
         {
             "name": "namelivia/laravel-travelperk",
-            "version": "0.0.52",
+            "version": "0.0.53",
             "source": {
                 "type": "git",
                 "url": "https://github.com/namelivia/laravel-travelperk.git",
-                "reference": "f16ca7faf8e6c2cb5260cfa8f3e03268c20613bd"
+                "reference": "59d2f42ec41ef83771e1b252d3e7c0cbe382d075"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/namelivia/laravel-travelperk/zipball/f16ca7faf8e6c2cb5260cfa8f3e03268c20613bd",
-                "reference": "f16ca7faf8e6c2cb5260cfa8f3e03268c20613bd",
+                "url": "https://api.github.com/repos/namelivia/laravel-travelperk/zipball/59d2f42ec41ef83771e1b252d3e7c0cbe382d075",
+                "reference": "59d2f42ec41ef83771e1b252d3e7c0cbe382d075",
                 "shasum": ""
             },
             "require": {
@@ -1566,7 +1566,7 @@
                 "illuminate/contracts": "5.5.*|5.6.*|5.7.*|5.8.*|6.*|7.*|8.*",
                 "illuminate/support": "5.5.*|5.6.*|5.7.*|5.8.*|6.*|7.*|8.*",
                 "kamermans/guzzle-oauth2-subscriber": "^1.0",
-                "namelivia/travelperk-http-php": "^0.0.51",
+                "namelivia/travelperk-http-php": "^0.0.52",
                 "php": "^7.3"
             },
             "require-dev": {
@@ -1607,20 +1607,20 @@
                 "laravel",
                 "travelperk"
             ],
-            "time": "2020-10-20T17:30:23+00:00"
+            "time": "2020-10-21T17:40:03+00:00"
         },
         {
             "name": "namelivia/travelperk-http-php",
-            "version": "0.0.51",
+            "version": "0.0.52",
             "source": {
                 "type": "git",
                 "url": "https://github.com/namelivia/travelperk-http-php.git",
-                "reference": "dde7e6c300c4ee7c8a92f9eb375f4c7928fe3baf"
+                "reference": "18c6ac8e92f85adaf487209c2e2a05c72a3f8842"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/namelivia/travelperk-http-php/zipball/dde7e6c300c4ee7c8a92f9eb375f4c7928fe3baf",
-                "reference": "dde7e6c300c4ee7c8a92f9eb375f4c7928fe3baf",
+                "url": "https://api.github.com/repos/namelivia/travelperk-http-php/zipball/18c6ac8e92f85adaf487209c2e2a05c72a3f8842",
+                "reference": "18c6ac8e92f85adaf487209c2e2a05c72a3f8842",
                 "shasum": ""
             },
             "require": {
@@ -1656,7 +1656,7 @@
                 "sdk",
                 "travelperk"
             ],
-            "time": "2020-10-20T17:24:11+00:00"
+            "time": "2020-10-21T17:16:05+00:00"
         },
         {
             "name": "nesbot/carbon",
@@ -5075,22 +5075,22 @@
         },
         {
             "name": "facade/flare-client-php",
-            "version": "1.3.6",
+            "version": "1.3.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/facade/flare-client-php.git",
-                "reference": "451fadf38e9f635e7f8e1f5b3cf5c9eb82f11799"
+                "reference": "fd688d3c06658f2b3b5f7bb19f051ee4ddf02492"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/facade/flare-client-php/zipball/451fadf38e9f635e7f8e1f5b3cf5c9eb82f11799",
-                "reference": "451fadf38e9f635e7f8e1f5b3cf5c9eb82f11799",
+                "url": "https://api.github.com/repos/facade/flare-client-php/zipball/fd688d3c06658f2b3b5f7bb19f051ee4ddf02492",
+                "reference": "fd688d3c06658f2b3b5f7bb19f051ee4ddf02492",
                 "shasum": ""
             },
             "require": {
                 "facade/ignition-contracts": "~1.0",
                 "illuminate/pipeline": "^5.5|^6.0|^7.0|^8.0",
-                "php": "^7.1",
+                "php": "^7.1|^8.0",
                 "symfony/http-foundation": "^3.3|^4.1|^5.0",
                 "symfony/mime": "^3.4|^4.0|^5.1",
                 "symfony/var-dumper": "^3.4|^4.0|^5.0"
@@ -5132,7 +5132,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-09-18T06:35:11+00:00"
+            "time": "2020-10-21T16:02:39+00:00"
         },
         {
             "name": "facade/ignition",

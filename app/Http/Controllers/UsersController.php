@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Namelivia\TravelPerk\Laravel\Facades\TravelPerk;
-use Namelivia\TravelPerk\SCIM\Language;
-use Namelivia\TravelPerk\SCIM\Gender;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 
@@ -59,16 +57,8 @@ class UsersController extends Controller
     public function create()
     {
 		return view('create-user', [
-			'languages' => [
-				Language::SPANISH,
-				Language::ENGLISH,
-				Language::DEUTSCH,
-				Language::FRENCH,
-			],
-			'genders' => [
-				Gender::MALE,
-				Gender::FEMALE,
-			]
+			'languages' => TravelPerk::scim()->users()->kanguages(),
+			'genders' => TravelPerk::scim()->users()->genders(),
 		]);
     }
 
@@ -82,16 +72,8 @@ class UsersController extends Controller
         $user = TravelPerk::scim()->users()->get($id);
         return view('modify-user', [
             'data' => $user,
-			'languages' => [
-				Language::SPANISH,
-				Language::ENGLISH,
-				Language::DEUTSCH,
-				Language::FRENCH,
-			],
-			'genders' => [
-				Gender::MALE,
-				Gender::FEMALE,
-			]
+			'languages' => TravelPerk::scim()->users()->kanguages(),
+			'genders' => TravelPerk::scim()->users()->genders(),
         ]);
     }
 
@@ -119,7 +101,7 @@ class UsersController extends Controller
 
         $language = $request->input("language");
 		if (isset($language)) {
-			$newUser->setLanguage(new Language($language));
+			$newUser->setLanguage($language);
 		}
 
         $locale = $request->input("locale");
@@ -144,7 +126,7 @@ class UsersController extends Controller
 
         $gender = $request->input("gender");
 		if (isset($gender)) {
-			$newUser->setGender(new Gender($gender));
+			$newUser->setGender($gender);
 		}
 
         $dateOfBirth = $request->input("dateOfBirth");
@@ -205,7 +187,7 @@ class UsersController extends Controller
 
         $language = $request->input("language");
 		if (isset($language)) {
-			$updatingUser->setLanguage(new Language($language));
+			$updatingUser->setLanguage($language);
 		}
 
         $phoneNumber = $request->input("phoneNumber");
@@ -230,7 +212,7 @@ class UsersController extends Controller
 
         $gender = $request->input("gender");
 		if (isset($gender)) {
-			$updatingUser->setGender(new Gender($gender));
+			$updatingUser->setGender($gender);
 		}
 
         $dateOfBirth = $request->input("dateOfBirth");
@@ -261,16 +243,8 @@ class UsersController extends Controller
 
         return view('modify-user', [
             'data' => $updatingUser->save(),
-			'languages' => [
-				Language::SPANISH,
-				Language::ENGLISH,
-				Language::DEUTSCH,
-				Language::FRENCH,
-			],
-			'genders' => [
-				Gender::MALE,
-				Gender::FEMALE,
-			]
+			'languages' => TravelPerk::scim()->users()->kanguages(),
+			'genders' => TravelPerk::scim()->users()->genders(),
         ]);
     }
 }
