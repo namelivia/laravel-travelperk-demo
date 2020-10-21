@@ -57,7 +57,7 @@ class UsersController extends Controller
     public function create()
     {
 		return view('create-user', [
-			'languages' => TravelPerk::scim()->users()->kanguages(),
+			'languages' => TravelPerk::scim()->users()->languages(),
 			'genders' => TravelPerk::scim()->users()->genders(),
 		]);
     }
@@ -72,7 +72,7 @@ class UsersController extends Controller
         $user = TravelPerk::scim()->users()->get($id);
         return view('modify-user', [
             'data' => $user,
-			'languages' => TravelPerk::scim()->users()->kanguages(),
+			'languages' => TravelPerk::scim()->users()->languages(),
 			'genders' => TravelPerk::scim()->users()->genders(),
         ]);
     }
@@ -243,7 +243,7 @@ class UsersController extends Controller
 
         return view('modify-user', [
             'data' => $updatingUser->save(),
-			'languages' => TravelPerk::scim()->users()->kanguages(),
+			'languages' => TravelPerk::scim()->users()->languages(),
 			'genders' => TravelPerk::scim()->users()->genders(),
         ]);
     }
