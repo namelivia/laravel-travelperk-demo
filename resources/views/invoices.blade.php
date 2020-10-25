@@ -22,12 +22,12 @@ Invoices
         @foreach($response->invoices as $invoice)
         <tr>
             <td>
-                <a href="{{route('invoice', ['serialNumber' => $invoice->serial_number])}}">
-                    {{ $invoice->serial_number }}
+                <a href="{{route('invoice', ['serialNumber' => $invoice->serialNumber])}}">
+                    {{ $invoice->serialNumber }}
                 </a>
             </td>
-            <td>{{ $invoice->profile_id }}</td>
-            <td>{{ $invoice->profile_name}}</td>
+            <td>{{ $invoice->profileId }}</td>
+            <td>{{ $invoice->profileName}}</td>
             <td>{{ $invoice->mode }}</td>
             <td>{{ $invoice->status }}</td>
             <td>{{ $invoice->total }}</td>

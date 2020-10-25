@@ -29,28 +29,28 @@ Invoices Profiles
         </tr>
     </thead>
     <tbody>
-        @foreach($response->invoice_lines as $invoiceLine)
+        @foreach($response->invoiceLines as $invoiceLine)
         <tr>
-            <td>{{ $invoiceLine->expense_date }}</td>
+            <td>{{ $invoiceLine->expenseDate }}</td>
             <td>{{ $invoiceLine->description }}</td>
             <td>{{ $invoiceLine->quantity }}</td>
-            <td>{{ $invoiceLine->unit_price }}</td>
-            <td>{{ $invoiceLine->non_taxable_unit_price }}</td>
-            <td>{{ $invoiceLine->tax_percentage }}</td>
-            <td>{{ $invoiceLine->tax_amount }}</td>
-            <td>{{ $invoiceLine->tax_regime }}</td>
-            <td>{{ $invoiceLine->total_amount }}</td>
+            <td>{{ $invoiceLine->unitPrice }}</td>
+            <td>{{ $invoiceLine->nonTaxableUnitPrice }}</td>
+            <td>{{ $invoiceLine->taxPercentage }}</td>
+            <td>{{ $invoiceLine->taxAmount }}</td>
+            <td>{{ $invoiceLine->taxRegime }}</td>
+            <td>{{ $invoiceLine->totalAmount }}</td>
             <td>
-                <a href="{{route('invoice', ['serialNumber' => $invoiceLine->invoice_serial_number])}}">
-                    {{ $invoiceLine->invoice_serial_number }}
+                <a href="{{route('invoice', ['serialNumber' => $invoiceLine->invoiceSerialNumber])}}">
+                    {{ $invoiceLine->invoiceSerialNumber }}
                 </a>
             </td>
-            <td>{{ $invoiceLine->profile_id }}</td>
-            <td>{{ $invoiceLine->profile_name }}</td>
-            <td>{{ $invoiceLine->invoice_mode }}</td>
-            <td>{{ $invoiceLine->invoice_status }}</td>
-            <td>{{ $invoiceLine->issuing_date }}</td>
-            <td>{{ $invoiceLine->due_date }}</td>
+            <td>{{ $invoiceLine->profileId }}</td>
+            <td>{{ $invoiceLine->profileName }}</td>
+            <td>{{ $invoiceLine->invoiceMode }}</td>
+            <td>{{ $invoiceLine->invoiceStatus }}</td>
+            <td>{{ $invoiceLine->issuingDate }}</td>
+            <td>{{ $invoiceLine->dueDate }}</td>
             <td>{{ $invoiceLine->currency }}</td>
         </tr>
         @endforeach

@@ -20,8 +20,8 @@ Invoices Profiles
         <tr>
             <td>{{ $profile->id }}</td>
             <td>{{ $profile->name }}</td>
-            <td>{{ $profile->payment_method_type }}</td>
-            <td>{{ $profile->billing_period }}</td>
+            <td>{{ $profile->paymentMethodType }}</td>
+            <td>{{ $profile->billingPeriod }}</td>
             <td>{{ $profile->currency }}</td>
         </tr>
         @endforeach
