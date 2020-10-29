@@ -34,4 +34,8 @@ Route::post('/users/create', 'UsersController@save');
 Route::get('/users/{id}/modify', 'UsersController@modify')->name('modify-user');
 Route::post('/users/{id}/modify', 'UsersController@update');
 Route::delete('/users/{id}', 'UsersController@delete')->name('delete-user');
+Route::get('/travelsafe', 'TravelSafeController@index')->name('travelsafe');
+Route::post('/travelsafe/restrictions', 'TravelSafeController@restrictions')->name('get-restrictions');
+Route::post('/travelsafe/summary', 'TravelSafeController@summary')->name('get-summary');
+Route::post('/travelsafe/airline', 'TravelSafeController@airline')->name('get-airline');
 Route::get('/oauth_callback', 'OAuthController@callback')->name('oauth-callback');

@@ -24,7 +24,7 @@ Schemas:
         </tr>
     </thead>
     <tbody>
-        @foreach($response->Resources as $user)
+        @foreach($response->resources as $user)
         <tr>
             <td>
                 <a href="{{route('user', ['id' => $user->id])}}">

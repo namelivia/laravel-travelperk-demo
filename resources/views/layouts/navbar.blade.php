@@ -24,6 +24,9 @@
       <li class="nav-item {{ \Str::contains(request()->route()->getName(),'webhook') ? 'active' : ''}}">
         <a class="nav-link" href="{{route('webhooks')}}">Webhooks</a>
       </li>
+      <li class="nav-item {{ \Str::contains(request()->route()->getName(),'travelsafe') ? 'active' : ''}}">
+        <a class="nav-link" href="{{route('travelsafe')}}">TravelSafe</a>
+      </li>
     </ul>
   </div>
 </nav>

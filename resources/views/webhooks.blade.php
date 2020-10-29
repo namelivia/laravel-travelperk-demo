@@ -32,9 +32,9 @@ Webdhooks
             </td>
             <td>{{ $webhook->url }}</td>
             <td>{{ implode($webhook->events) }}</td>
-            <td>{{ $webhook->successfully_sent }}</td>
-            <td>{{ $webhook->failed_sent }}</td>
-            <td>{{ $webhook->error_rate }}</td>
+            <td>{{ $webhook->successfullySent }}</td>
+            <td>{{ $webhook->failedSent }}</td>
+            <td>{{ $webhook->errorRate }}</td>
             <td>
                 <div class="btn-group" role="group">
                     <a href="{{route('modify-webhook', ['id' => $webhook->id])}}">

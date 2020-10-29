@@ -60,34 +60,34 @@ Update User
                 <select id="gender" name="gender" class="form-control">
                     @foreach($genders as $gender)
                         <option value="{{$gender}}"
-                        @if ($gender === $data->{'urn:ietf:params:scim:schemas:extension:travelperk:2.0:User'}->gender) selected @endif >
+                        @if ($gender === $data->travelperkExtension->gender) selected @endif >
                         {{$gender}}</option>
                     @endforeach
                 </select>
             </div>
             <div class="form-group">
                 <label for="dateOfBirth">Date of Birth</label>
-                <input id="dateOfBirth" value="{{$data->{'urn:ietf:params:scim:schemas:extension:travelperk:2.0:User'}->dateOfBirth}}" name="dateOfBirth" type="date" class="form-control">
+                <input id="dateOfBirth" value="{{$data->travelperkExtension->dateOfBirth}}" name="dateOfBirth" type="date" class="form-control">
             </div>
             <div class="form-group">
                 <label for="travelPolicy">Travel Policy</label>
-                <input id="travelPolicy" value="{{$data->{'urn:ietf:params:scim:schemas:extension:travelperk:2.0:User'}->travelPolicy}}" name="travelPolicy" type="text" class="form-control">
+                <input id="travelPolicy" value="{{$data->travelperkExtension->travelPolicy}}" name="travelPolicy" type="text" class="form-control">
             </div>
             <div class="form-group">
                 <label for="costCenter">Cost Center</label>
-                <input id="costCenter" value="{{$data->{'urn:ietf:params:scim:schemas:extension:enterprise:2.0:User'}->costCenter}}" name="costCenter" type="text" class="form-control">
+                <input id="costCenter" value="{{$data->enterpriseExtension->costCenter}}" name="costCenter" type="text" class="form-control">
             </div>
             <div class="form-group">
                 <label for="manager">Manager</label>
-                <input id="manager" value="{{$data->{'urn:ietf:params:scim:schemas:extension:enterprise:2.0:User'}->manager->value}}" name="manager" type="text" class="form-control">
+                <input id="manager" value="{{$data->enterpriseExtension->manager->value}}" name="manager" type="text" class="form-control">
             </div>
             <div class="form-group">
                 <label for="emergencyContactName">Emergency Contact Name</label>
-                <input id="emergencyContactName" value="{{$data->{'urn:ietf:params:scim:schemas:extension:travelperk:2.0:User'}->emergencyContact->name}}" name="emergencyContactName" type="text" class="form-control">
+                <input id="emergencyContactName" value="{{$data->travelperkExtension->emergencyContact->name}}" name="emergencyContactName" type="text" class="form-control">
             </div>
             <div class="form-group">
                 <label for="emergencyContactPhone">Emergency Contact Phone</label>
-                <input id="emergencyContactPhone" value="{{$data->{'urn:ietf:params:scim:schemas:extension:travelperk:2.0:User'}->emergencyContact->phone}}" name="emergencyContactPhone" type="text" class="form-control">
+                <input id="emergencyContactPhone" value="{{$data->travelperkExtension->emergencyContact->phone}}" name="emergencyContactPhone" type="text" class="form-control">
             </div>
             <input class="btn btn-primary" type="submit" value="Update"/>
         </form>

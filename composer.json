@@ -15,8 +15,7 @@
         "laravel/framework": "^8.0",
         "laravel/tinker": "^2.0",
         "laravel/ui": "^3.0",
-        "namelivia/laravel-travelperk": "^0.0.55",
-        "json-mapper/json-mapper": "dev-fix_docblock_type_parsing"
+        "namelivia/laravel-travelperk": "^0.0.59"
     },
     "require-dev": {
         "facade/ignition": "^2.3.6",
@@ -47,12 +46,6 @@
             "Tests\\": "tests/"
         }
     },
-    "repositories": [
-        {
-          "type": "vcs",
-          "url": "https://github.com/namelivia/JsonMapper.git"
-        }
-    ],
     "minimum-stability": "dev",
     "prefer-stable": true,
     "scripts": {

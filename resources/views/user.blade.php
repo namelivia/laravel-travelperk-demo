@@ -43,25 +43,25 @@ User {{ $data->id }}
   			<dt class="col-sm-2">Location</dt>
   			<dd class="col-sm-4">{{$data->meta->location}}</dd>
   			<dt class="col-sm-2">Cost Center</dt>
-  			<dd class="col-sm-4">{{$data->{'urn:ietf:params:scim:schemas:extension:enterprise:2.0:User'}->costCenter}}</dd>
+  			<dd class="col-sm-4">{{$data->enterpriseExtension->costCenter}}</dd>
   			<dt class="col-sm-2">Manager</dt>
-  			<dd class="col-sm-4">{{$data->{'urn:ietf:params:scim:schemas:extension:enterprise:2.0:User'}->manager->value}}</dd>
+  			<dd class="col-sm-4">{{$data->enterpriseExtension->manager->value}}</dd>
   			<dt class="col-sm-2">Gender</dt>
-  			<dd class="col-sm-4">{{$data->{'urn:ietf:params:scim:schemas:extension:travelperk:2.0:User'}->gender}}</dd>
+  			<dd class="col-sm-4">{{$data->travelperkExtension->gender}}</dd>
   			<dt class="col-sm-2">Date of Birth</dt>
-  			<dd class="col-sm-4">{{$data->{'urn:ietf:params:scim:schemas:extension:travelperk:2.0:User'}->dateOfBirth}}</dd>
+  			<dd class="col-sm-4">{{$data->travelperkExtension->dateOfBirth}}</dd>
   			<dt class="col-sm-2">Invoice profiles</dt>
             <dd class="col-sm-4">{{implode(
                 array_map(function ($a) {
                     return $a->value;
-                }, $data->{'urn:ietf:params:scim:schemas:extension:travelperk:2.0:User'}->invoiceProfiles)
+                }, $data->travelperkExtension->invoiceProfiles)
             )}}</dd>
   			<dt class="col-sm-2">Emergency contact name</dt>
-            <dd class="col-sm-4">{{$data->{'urn:ietf:params:scim:schemas:extension:travelperk:2.0:User'}->emergencyContact->name}}</dd>
+            <dd class="col-sm-4">{{$data->travelperkExtension->emergencyContact->name}}</dd>
   			<dt class="col-sm-2">Emergency contact phone</dt>
-            <dd class="col-sm-4">{{$data->{'urn:ietf:params:scim:schemas:extension:travelperk:2.0:User'}->emergencyContact->phone}}</dd>
+            <dd class="col-sm-4">{{$data->travelperkExtension->emergencyContact->phone}}</dd>
   			<dt class="col-sm-2">Travel Policy</dt>
-            <dd class="col-sm-4">{{$data->{'urn:ietf:params:scim:schemas:extension:travelperk:2.0:User'}->travelPolicy}}</dd>
+            <dd class="col-sm-4">{{$data->travelperkExtension->travelPolicy}}</dd>
 		</dl>
     </div>
 </div>

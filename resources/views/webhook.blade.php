@@ -21,11 +21,11 @@ Webhook {{ $data->id }}
   			<dt class="col-sm-3">Events</dt>
   			<dd class="col-sm-9">{{implode($data->events)}}</dd>
   			<dt class="col-sm-3">Sucessfully Sent</dt>
-  			<dd class="col-sm-9">{{$data->successfully_sent}}</dd>
+  			<dd class="col-sm-9">{{$data->successfullySent}}</dd>
   			<dt class="col-sm-3">Failed Sent</dt>
-  			<dd class="col-sm-9">{{$data->failed_sent}}</dd>
+  			<dd class="col-sm-9">{{$data->failedSent}}</dd>
   			<dt class="col-sm-3">Error Rate</dt>
-  			<dd class="col-sm-9">{{$data->error_rate}}</dd>
+  			<dd class="col-sm-9">{{$data->errorRate}}</dd>
 		</dl>
         <form method="POST" action="/webhooks/{{$data->id}}/test">
             @csrf
