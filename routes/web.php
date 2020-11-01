@@ -38,4 +38,3 @@ Route::get('/travelsafe', 'TravelSafeController@index')->name('travelsafe');
 Route::post('/travelsafe/restrictions', 'TravelSafeController@restrictions')->name('get-restrictions');
 Route::post('/travelsafe/summary', 'TravelSafeController@summary')->name('get-summary');
 Route::post('/travelsafe/airline', 'TravelSafeController@airline')->name('get-airline');
-Route::get('/oauth_callback', 'OAuthController@callback')->name('oauth-callback');
