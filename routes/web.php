@@ -19,6 +19,7 @@ Route::get('/invoices/{serialNumber}', 'InvoicesController@view')->name('invoice
 Route::get('/invoice-profiles', 'InvoicesController@profiles')->name('invoice-profiles');
 Route::get('/invoice-lines', 'InvoicesController@lines')->name('invoice-lines');
 Route::get('/users', 'UsersController@all')->name('users');
+Route::get('/users_no_scim', 'UsersNoSCIMController@all')->name('users_no_scim');
 Route::get('/discovery', 'DiscoveryController@discovery')->name('discovery');
 Route::get('/webhooks', 'WebhooksController@all')->name('webhooks');
 Route::get('/webhooks/create', 'WebhooksController@create')->name('create-webhook');

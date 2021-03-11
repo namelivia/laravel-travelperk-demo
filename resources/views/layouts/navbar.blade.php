@@ -16,7 +16,10 @@
         <a class="nav-link" href="{{route('invoice-lines')}}">Invoice Lines</a>
       </li>
       <li class="nav-item {{ \Str::contains(request()->route()->getName(),'users') ? 'active' : ''}}">
-        <a class="nav-link" href="{{route('users')}}">Users</a>
+        <a class="nav-link" href="{{route('users')}}">Users (SCIM)</a>
+      </li>
+      <li class="nav-item {{ \Str::contains(request()->route()->getName(),'users_no_scim') ? 'active' : ''}}">
+        <a class="nav-link" href="{{route('users_no_scim')}}">Users (No SCIM)</a>
       </li>
       <li class="nav-item {{ \Str::contains(request()->route()->getName(),'discovery') ? 'active' : ''}}">
         <a class="nav-link" href="{{route('discovery')}}">Discovery</a>
