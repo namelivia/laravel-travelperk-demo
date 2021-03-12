@@ -7,9 +7,9 @@ use Namelivia\TravelPerk\Laravel\Facades\TravelPerk;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 
-class UsersNoSCIMController extends Controller
+class TripsController extends Controller
 {
-    private function getUserFilteringFields()
+    private function getTripFilteringFields()
     {
         return [
             [
@@ -23,13 +23,13 @@ class UsersNoSCIMController extends Controller
     }
 
     /**
-     * Show all users.
+     * Show all trips
      *
      * @return View
      */
     public function all(Request $request)
 	{
-        $query = TravelPerk::users()->users()->query();
+        $query = TravelPerk::trips()->trips()->query();
 
         // Statically fixing the limit to 50 by now
         $limit = 50;
@@ -40,7 +40,7 @@ class UsersNoSCIMController extends Controller
 			$query->setStartIndex(($page * $limit) + 1);
 		}
 
-        foreach($this->getUserFilteringFields() as $filter) {
+        foreach($this->getTripFilteringFields() as $filter) {
             $value = $request->input($filter['param']);
             if (isset($value)) {
                 $filter['method']($query, $value);
@@ -51,9 +51,9 @@ class UsersNoSCIMController extends Controller
 		$data->total = $data->totalResults;
 		$data->limit = $limit;
 		$data->offset = $data->startIndex - 1;
-        return view('users_no_scim', [
+        return view('trips', [
             'response' => $query->get(),
-            'filteringFields' => $this->getUserFilteringFields(),
+            'filteringFields' => $this->getTripFilteringFields(),
         ]);
     }
 }

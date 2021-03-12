@@ -30,6 +30,9 @@
       <li class="nav-item {{ \Str::contains(request()->route()->getName(),'travelsafe') ? 'active' : ''}}">
         <a class="nav-link" href="{{route('travelsafe')}}">TravelSafe</a>
       </li>
+      <li class="nav-item {{ \Str::contains(request()->route()->getName(),'trips') ? 'active' : ''}}">
+        <a class="nav-link" href="{{route('trips')}}">Trips</a>
+      </li>
     </ul>
   </div>
 </nav>
