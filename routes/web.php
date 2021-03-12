@@ -40,3 +40,4 @@ Route::post('/travelsafe/restrictions', 'TravelSafeController@restrictions')->na
 Route::post('/travelsafe/summary', 'TravelSafeController@summary')->name('get-summary');
 Route::post('/travelsafe/airline', 'TravelSafeController@airline')->name('get-airline');
 Route::get('/trips', 'TripsController@all')->name('trips');
+Route::get('/bookings', 'TripsController@bookings')->name('bookings');

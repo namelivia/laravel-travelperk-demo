@@ -48,9 +48,6 @@ class UsersNoSCIMController extends Controller
         }
 
 		$data = $query->get();
-		$data->total = $data->totalResults;
-		$data->limit = $limit;
-		$data->offset = $data->startIndex - 1;
         return view('users_no_scim', [
             'response' => $query->get(),
             'filteringFields' => $this->getUserFilteringFields(),
