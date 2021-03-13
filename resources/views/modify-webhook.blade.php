@@ -29,7 +29,7 @@ Update Webhook
                 <label for="events">Events</label>
                 <select multiple="multiple" id="events" name="events[]" class="form-control">
                     @foreach($events as $event)
-                        <option value="{{$event->name}}" selected="{{in_array($event->name, $data->events)}}">{{ $event->name }}</option>
+                        <option value="{{$event->name}}" {{in_array($event->name, $data->events) ? "selected" : ""}}>{{ $event->name }}</option>
                     @endforeach
                 </select>
             </div>

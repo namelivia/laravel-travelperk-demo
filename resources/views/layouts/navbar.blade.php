@@ -36,6 +36,9 @@
       <li class="nav-item {{ \Str::contains(request()->route()->getName(),'bookings') ? 'active' : ''}}">
         <a class="nav-link" href="{{route('bookings')}}">Bookings</a>
       </li>
+      <li class="nav-item {{ \Str::contains(request()->route()->getName(),'cost-centers') ? 'active' : ''}}">
+        <a class="nav-link" href="{{route('cost-centers')}}">Cost Centers</a>
+      </li>
     </ul>
   </div>
 </nav>

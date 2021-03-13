@@ -41,3 +41,9 @@ Route::post('/travelsafe/summary', 'TravelSafeController@summary')->name('get-su
 Route::post('/travelsafe/airline', 'TravelSafeController@airline')->name('get-airline');
 Route::get('/trips', 'TripsController@all')->name('trips');
 Route::get('/bookings', 'TripsController@bookings')->name('bookings');
+Route::get('/cost-centers', 'CostCentersController@all')->name('cost-centers');
+Route::get('/cost-centers/{id}', 'CostCentersController@view')->name('cost-center');
+Route::get('/cost-centers/{id}/update', 'CostCentersController@modify')->name('modify-cost-center');
+Route::post('/cost-centers/{id}/update', 'CostCentersController@update');
+Route::get('/cost-centers/{id}/set_users', 'CostCentersController@modifyUsers')->name('modify-users');
+Route::post('/cost-centers/{id}/set_users', 'CostCentersController@setUsers');

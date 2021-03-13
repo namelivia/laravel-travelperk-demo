@@ -125,7 +125,7 @@ class WebhooksController extends Controller
 
         $events = $request->input("events");
 		if (isset($events)) {
-			$webhook->setEvents($events);
+		    $webhook->setEvents($events);
 		}
 
         $updatedWebhook = $webhook->save();
