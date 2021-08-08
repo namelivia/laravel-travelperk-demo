@@ -10,17 +10,24 @@
         "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
     },
     "devDependencies": {
-        "@fortawesome/fontawesome-free": "^5.15.1",
+        "@fortawesome/fontawesome-free": "^5.15.3",
         "axios": "^0.21",
+<<<<<<< Updated upstream
         "bootstrap": "^4.5.3",
         "cross-env": "^7.0",
         "jquery": "^3.2",
         "laravel-mix": "^5.0.7",
+=======
+        "bootstrap": "^4.6.0",
+        "cross-env": "^7.0.3",
+        "jquery": "^3.6.0",
+        "laravel-mix": "^5.0.9",
+>>>>>>> Stashed changes
         "lodash": "^4.17.21",
         "popper.js": "^1.12",
-        "resolve-url-loader": "^3.1.2",
-        "sass": "^1.28.0",
+        "resolve-url-loader": "^3.1.4",
+        "sass": "^1.35.1",
         "sass-loader": "^8.0.0",
-        "vue-template-compiler": "^2.6.12"
+        "vue-template-compiler": "^2.6.14"
     }
 }
