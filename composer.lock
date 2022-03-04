@@ -647,26 +647,26 @@
         },
         {
             "name": "graham-campbell/manager",
-            "version": "v4.6.1",
+            "version": "v4.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Laravel-Manager.git",
-                "reference": "c5c89d02fd6125b121c58245caf4b918a413d4be"
+                "reference": "b4cafa6491b9c92ecf7ce17521580050a27b8308"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Manager/zipball/c5c89d02fd6125b121c58245caf4b918a413d4be",
-                "reference": "c5c89d02fd6125b121c58245caf4b918a413d4be",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Manager/zipball/b4cafa6491b9c92ecf7ce17521580050a27b8308",
+                "reference": "b4cafa6491b9c92ecf7ce17521580050a27b8308",
                 "shasum": ""
             },
             "require": {
-                "illuminate/contracts": "^5.5 || ^6.0 || ^7.0 || ^8.0",
-                "illuminate/support": "^5.5 || ^6.0 || ^7.0 || ^8.0",
+                "illuminate/contracts": "^5.5 || ^6.0 || ^7.0 || ^8.0 || ^9.0",
+                "illuminate/support": "^5.5 || ^6.0 || ^7.0 || ^8.0 || ^9.0",
                 "php": "^7.1.3 || ^8.0"
             },
             "require-dev": {
                 "graham-campbell/analyzer": "^2.4 || ^3.0",
-                "graham-campbell/testbench-core": "^3.2",
+                "graham-campbell/testbench-core": "^3.4",
                 "mockery/mockery": "^1.3.1",
                 "phpunit/phpunit": "^6.5.14 || ^7.5.20 || ^8.5.8 || ^9.3.7"
             },
@@ -701,7 +701,7 @@
             ],
             "support": {
                 "issues": "https://github.com/GrahamCampbell/Laravel-Manager/issues",
-                "source": "https://github.com/GrahamCampbell/Laravel-Manager/tree/v4.6.1"
+                "source": "https://github.com/GrahamCampbell/Laravel-Manager/tree/v4.7.0"
             },
             "funding": [
                 {
@@ -713,7 +713,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-11-21T14:34:20+00:00"
+            "time": "2022-01-24T01:59:19+00:00"
         },
         {
             "name": "graham-campbell/result-type",
@@ -821,12 +821,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "GuzzleHttp\\": "src/"
-                },
                 "files": [
                     "src/functions_include.php"
-                ]
+                ],
+                "psr-4": {
+                    "GuzzleHttp\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -928,12 +928,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "GuzzleHttp\\Promise\\": "src/"
-                },
                 "files": [
                     "src/functions_include.php"
-                ]
+                ],
+                "psr-4": {
+                    "GuzzleHttp\\Promise\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -1102,16 +1102,16 @@
         },
         {
             "name": "json-mapper/json-mapper",
-            "version": "2.9.1",
+            "version": "2.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JsonMapper/JsonMapper.git",
-                "reference": "b52ac7e0f6313be72a989c7a361327f652d22675"
+                "reference": "80c105c7af3b6a3102ae21601a1869e5f7bdb8ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JsonMapper/JsonMapper/zipball/b52ac7e0f6313be72a989c7a361327f652d22675",
-                "reference": "b52ac7e0f6313be72a989c7a361327f652d22675",
+                "url": "https://api.github.com/repos/JsonMapper/JsonMapper/zipball/80c105c7af3b6a3102ae21601a1869e5f7bdb8ef",
+                "reference": "80c105c7af3b6a3102ae21601a1869e5f7bdb8ef",
                 "shasum": ""
             },
             "require": {
@@ -1119,7 +1119,7 @@
                 "myclabs/php-enum": "~1.7.0",
                 "nikic/php-parser": "^4.13",
                 "php": "^7.1 || ^8.0",
-                "psr/log": "^1.1",
+                "psr/log": "^1.1 || ^2.0 || ^3.0",
                 "psr/simple-cache": "^1.0",
                 "symfony/polyfill-php73": "^1.18"
             },
@@ -1130,6 +1130,7 @@
                 "phpstan/phpstan-phpunit": "^0.12.17",
                 "phpunit/phpunit": "^7.5 || ^8.5 || ^9.0",
                 "squizlabs/php_codesniffer": "^3.5",
+                "symfony/console": "^2.1 || ^3.0 || ^4.0 || ^5.0",
                 "vimeo/psalm": "^4.10"
             },
             "suggest": {
@@ -1159,7 +1160,7 @@
                 "issues": "https://github.com/JsonMapper/JsonMapper/issues",
                 "source": "https://github.com/JsonMapper/JsonMapper"
             },
-            "time": "2021-11-12T13:43:47+00:00"
+            "time": "2022-02-09T16:10:41+00:00"
         },
         {
             "name": "kamermans/guzzle-oauth2-subscriber",
@@ -2064,24 +2065,24 @@
         },
         {
             "name": "namelivia/laravel-travelperk",
-            "version": "1.4.9",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/namelivia/laravel-travelperk.git",
-                "reference": "9617a16f961426e8c7ef042975f5238d8fa30486"
+                "reference": "5de8ab042c3773775f256377982fb88725b9c0b6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/namelivia/laravel-travelperk/zipball/9617a16f961426e8c7ef042975f5238d8fa30486",
-                "reference": "9617a16f961426e8c7ef042975f5238d8fa30486",
+                "url": "https://api.github.com/repos/namelivia/laravel-travelperk/zipball/5de8ab042c3773775f256377982fb88725b9c0b6",
+                "reference": "5de8ab042c3773775f256377982fb88725b9c0b6",
                 "shasum": ""
             },
             "require": {
                 "graham-campbell/manager": "3.*|4.*",
-                "illuminate/contracts": "5.5.*|5.6.*|5.7.*|5.8.*|6.*|7.*|8.*",
-                "illuminate/support": "5.5.*|5.6.*|5.7.*|5.8.*|6.*|7.*|8.*",
+                "illuminate/contracts": "5.5.*|5.6.*|5.7.*|5.8.*|6.*|7.*|8.*|9.*",
+                "illuminate/support": "5.5.*|5.6.*|5.7.*|5.8.*|6.*|7.*|8.*|9.*",
                 "kamermans/guzzle-oauth2-subscriber": "^1.0",
-                "namelivia/travelperk-http-php": "^1.4.0",
+                "namelivia/travelperk-http-php": "^1.6.0",
                 "php": "^7.3|^8.0"
             },
             "require-dev": {
@@ -2124,29 +2125,29 @@
             ],
             "support": {
                 "issues": "https://github.com/namelivia/laravel-travelperk/issues",
-                "source": "https://github.com/namelivia/laravel-travelperk/tree/1.4.9"
+                "source": "https://github.com/namelivia/laravel-travelperk/tree/1.5.0"
             },
-            "time": "2021-10-07T09:29:22+00:00"
+            "time": "2022-03-03T17:18:59+00:00"
         },
         {
             "name": "namelivia/travelperk-http-php",
-            "version": "1.5.15",
+            "version": "1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/namelivia/travelperk-http-php.git",
-                "reference": "498671df350697a70528acf165630ae2d07e40e5"
+                "reference": "dd9dca9f97af558a7a633a3b53cb85436396a3cd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/namelivia/travelperk-http-php/zipball/498671df350697a70528acf165630ae2d07e40e5",
-                "reference": "498671df350697a70528acf165630ae2d07e40e5",
+                "url": "https://api.github.com/repos/namelivia/travelperk-http-php/zipball/dd9dca9f97af558a7a633a3b53cb85436396a3cd",
+                "reference": "dd9dca9f97af558a7a633a3b53cb85436396a3cd",
                 "shasum": ""
             },
             "require": {
                 "guzzlehttp/guzzle": "^7.0.1",
                 "json-mapper/json-mapper": "^2.6.0",
                 "kamermans/guzzle-oauth2-subscriber": "^1.0",
-                "namelivia/travelperk-php-api-types": "^1.2.9",
+                "namelivia/travelperk-php-api-types": "^1.3.2",
                 "nesbot/carbon": "^2.0",
                 "php": "^7.4|^8.0"
             },
@@ -2179,22 +2180,22 @@
             ],
             "support": {
                 "issues": "https://github.com/namelivia/travelperk-http-php/issues",
-                "source": "https://github.com/namelivia/travelperk-http-php/tree/1.5.15"
+                "source": "https://github.com/namelivia/travelperk-http-php/tree/1.6.0"
             },
-            "time": "2021-12-08T09:12:39+00:00"
+            "time": "2022-03-03T17:11:25+00:00"
         },
         {
             "name": "namelivia/travelperk-php-api-types",
-            "version": "1.2.14",
+            "version": "1.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/namelivia/travelperk-php-api-types.git",
-                "reference": "4894917428e492f3108f028943b3c8c4083c47f6"
+                "reference": "4d79f86fa6f227cbf6ff813b099f034e1be01a50"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/namelivia/travelperk-php-api-types/zipball/4894917428e492f3108f028943b3c8c4083c47f6",
-                "reference": "4894917428e492f3108f028943b3c8c4083c47f6",
+                "url": "https://api.github.com/repos/namelivia/travelperk-php-api-types/zipball/4d79f86fa6f227cbf6ff813b099f034e1be01a50",
+                "reference": "4d79f86fa6f227cbf6ff813b099f034e1be01a50",
                 "shasum": ""
             },
             "require": {
@@ -2228,9 +2229,9 @@
             ],
             "support": {
                 "issues": "https://github.com/namelivia/travelperk-php-api-types/issues",
-                "source": "https://github.com/namelivia/travelperk-php-api-types/tree/fetch"
+                "source": "https://github.com/namelivia/travelperk-php-api-types/tree/1.3.2"
             },
-            "time": "2021-12-08T09:10:42+00:00"
+            "time": "2022-03-03T16:54:54+00:00"
         },
         {
             "name": "nesbot/carbon",
@@ -2927,30 +2928,30 @@
         },
         {
             "name": "psr/log",
-            "version": "1.1.4",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/log.git",
-                "reference": "d49695b909c3b7628b6289db5479a1c204601f11"
+                "reference": "ef29f6d262798707a9edd554e2b82517ef3a9376"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/d49695b909c3b7628b6289db5479a1c204601f11",
-                "reference": "d49695b909c3b7628b6289db5479a1c204601f11",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/ef29f6d262798707a9edd554e2b82517ef3a9376",
+                "reference": "ef29f6d262798707a9edd554e2b82517ef3a9376",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.0"
+                "php": ">=8.0.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.1.x-dev"
+                    "dev-master": "2.0.x-dev"
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "Psr\\Log\\": "Psr/Log/"
+                    "Psr\\Log\\": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2971,9 +2972,9 @@
                 "psr-3"
             ],
             "support": {
-                "source": "https://github.com/php-fig/log/tree/1.1.4"
+                "source": "https://github.com/php-fig/log/tree/2.0.0"
             },
-            "time": "2021-05-03T11:20:27+00:00"
+            "time": "2021-07-14T16:41:46+00:00"
         },
         {
             "name": "psr/simple-cache",
