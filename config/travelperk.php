@@ -39,7 +39,7 @@ return [
             'redirect_url' => env('TRAVELPERK_REDIRECT_URL', 'your-redirect-url'),
             'access_token_path' => env('TRAVELPERK_ACCESS_TOKEN_PATH', '/your/access/token/path'),
             'scopes' => [],
-            'is_sandbox' => false,
+            'is_sandbox' => true,
         ],
 
         'alternative' => [
